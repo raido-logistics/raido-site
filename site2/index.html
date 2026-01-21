@@ -656,10 +656,7 @@
         }
 
         .contact-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            max-width: 1400px;
+            max-width: 800px;
             margin: 0 auto;
         }
 
@@ -773,11 +770,16 @@
         }
 
         .details-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            max-width: 1400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+            max-width: 800px;
             margin: 0 auto;
+        }
+
+        .details-grid .detail-card {
+            width: 100%;
         }
 
         .detail-card {
@@ -942,9 +944,6 @@
                 bottom: -20px;
             }
 
-            .contact-container {
-                grid-template-columns: 1fr;
-            }
 
             .why-us-grid {
                 grid-template-columns: 1fr;
@@ -1238,31 +1237,6 @@
                     </div>
                 </div>
             </div>
-            <div class="contact-form-wrapper fade-in">
-                <form class="contact-form" id="contactForm">
-                    <h3>Wyślij wiadomość</h3>
-                    <div class="form-group">
-                        <label for="name">Imię i nazwisko</label>
-                        <input type="text" id="name" name="name" required placeholder="Twoje imię i nazwisko">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required placeholder="Twój adres email">
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Telefon</label>
-                        <input type="tel" id="phone" name="phone" placeholder="Twój numer telefonu">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Wiadomość</label>
-                        <textarea id="message" name="message" required placeholder="Opisz czego potrzebujesz..."></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
-                        <i class="fas fa-paper-plane"></i>
-                        Wyślij wiadomość
-                    </button>
-                </form>
-            </div>
         </div>
     </section>
 
@@ -1297,21 +1271,6 @@
                 <div class="detail-item">
                     <span class="label">REGON</span>
                     <span class="value">527873817</span>
-                </div>
-            </div>
-            <div class="detail-card fade-in">
-                <h3><i class="fas fa-university"></i> Dane Bankowe</h3>
-                <div class="detail-item">
-                    <span class="label">Bank</span>
-                    <span class="value">PKO Bank Polski S.A.</span>
-                </div>
-                <div class="detail-item">
-                    <span class="label">IBAN</span>
-                    <span class="value">PL18 1020 4317 0000 5802 0593 1888</span>
-                </div>
-                <div class="detail-item">
-                    <span class="label">SWIFT</span>
-                    <span class="value">BPKOPLPWXXX</span>
                 </div>
             </div>
         </div>
@@ -1394,26 +1353,6 @@
             observer.observe(el);
         });
 
-        // Form submission
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            const name = formData.get('name');
-            const email = formData.get('email');
-            const phone = formData.get('phone');
-            const message = formData.get('message');
-            
-            // Create mailto link
-            const subject = encodeURIComponent(`Zapytanie od ${name}`);
-            const body = encodeURIComponent(`Imię i nazwisko: ${name}\nEmail: ${email}\nTelefon: ${phone}\n\nWiadomość:\n${message}`);
-            
-            window.location.href = `mailto:raido.logistics.pl@gmail.com?subject=${subject}&body=${body}`;
-            
-            // Show success message
-            alert('Dziękujemy za wiadomość! Zostaniesz przekierowany do swojego programu pocztowego.');
-        });
 
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
