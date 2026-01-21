@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RAIDO Logistics - Profesjonalne usługi logistyczne w Polsce i Europie">
+    <meta name="keywords" content="logistyka, transport, spedycja, Polska, Europa">
+    <title>RAIDO Logistics Sp. z o.o. - Profesjonalna Logistyka</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader">
+            <div class="truck-container">
+                <div class="truck">
+                    <div class="truck-body"></div>
+                    <div class="truck-cabin"></div>
+                    <div class="wheel wheel-front"></div>
+                    <div class="wheel wheel-back"></div>
+                </div>
+                <div class="road"></div>
+            </div>
+            <div class="loader-text">
+                <span class="loader-raido">RAIDO</span>
+                <span class="loader-logistics">Logistics</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <button class="lang-btn active" data-lang="pl" title="Polski">
+            <span class="flag-icon">🇵🇱</span>
+            <span>PL</span>
+        </button>
+        <button class="lang-btn" data-lang="en" title="English">
+            <span class="flag-icon">🇬🇧</span>
+            <span>EN</span>
+        </button>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#home" class="logo">
+                <span class="logo-raido">RAIDO</span>
+                <span class="logo-logistics">Logistics</span>
+            </a>
+            
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active" data-pl="Strona główna" data-en="Home">Strona główna</a></li>
+                    <li><a href="#about" class="nav-link" data-pl="O nas" data-en="About">O nas</a></li>
+                    <li><a href="#services" class="nav-link" data-pl="Usługi" data-en="Services">Usługi</a></li>
+                    <li><a href="#why-us" class="nav-link" data-pl="Dlaczego my" data-en="Why Us">Dlaczego my</a></li>
+                    <li><a href="#contact" class="nav-link" data-pl="Kontakt" data-en="Contact">Kontakt</a></li>
+                </ul>
+            </div>
+            
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="hero-bg">
+            <div class="hero-overlay"></div>
+            <div class="animated-trucks">
+                <div class="truck-animation truck-1"></div>
+                <div class="truck-animation truck-2"></div>
+                <div class="truck-animation truck-3"></div>
+            </div>
+        </div>
+        
+        <div class="container hero-content">
+            <div class="hero-text" data-aos="fade-up">
+                <h1>
+                    <span class="hero-logo-raido">RAIDO</span>
+                    <span class="hero-logo-logistics">Logistics</span>
+                </h1>
+                <p class="hero-subtitle" data-pl="Profesjonalne rozwiązania logistyczne dla Twojego biznesu" data-en="Professional logistics solutions for your business">
+                    Profesjonalne rozwiązania logistyczne dla Twojego biznesu
+                </p>
+                <p class="hero-description" data-pl="Zapewniamy niezawodny transport i kompleksową obsługę logistyczną na terenie Polski i całej Europy" data-en="We provide reliable transport and comprehensive logistics services in Poland and throughout Europe">
+                    Zapewniamy niezawodny transport i kompleksową obsługę logistyczną na terenie Polski i całej Europy
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary" data-pl="Skontaktuj się" data-en="Contact Us">
+                        <i class="fas fa-paper-plane"></i>
+                        <span>Skontaktuj się</span>
+                    </a>
+                    <a href="#services" class="btn btn-secondary" data-pl="Nasze usługi" data-en="Our Services">
+                        <i class="fas fa-truck"></i>
+                        <span>Nasze usługi</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-stats" data-aos="fade-up" data-aos-delay="200">
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <div class="stat-number" data-count="1000">0</div>
+                    <div class="stat-label" data-pl="Tras rocznie" data-en="Routes yearly">Tras rocznie</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="stat-number" data-count="150">0</div>
+                    <div class="stat-label" data-pl="Zadowolonych klientów" data-en="Happy clients">Zadowolonych klientów</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-globe-europe"></i>
+                    </div>
+                    <div class="stat-number" data-count="25">0</div>
+                    <div class="stat-label" data-pl="Krajów w Europie" data-en="Countries in Europe">Krajów w Europie</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <a href="#about">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <div class="arrows">
+                    <span></span>
+                    <span></span>
+                </div>
+            </a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle" data-pl="Poznaj nas" data-en="Get to know us">Poznaj nas</span>
+                <h2 class="section-title" data-pl="O naszej firmie" data-en="About our company">O naszej firmie</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-image" data-aos="fade-right">
+                    <div class="image-wrapper">
+                        <div class="image-placeholder">
+                            <i class="fas fa-truck-moving"></i>
+                        </div>
+                        <div class="experience-badge">
+                            <span class="years">2024</span>
+                            <span class="text" data-pl="Rok założenia" data-en="Year founded">Rok założenia</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-text" data-aos="fade-left">
+                    <h3 data-pl="RAIDO Logistics Sp. z o.o." data-en="RAIDO Logistics Sp. z o.o.">RAIDO Logistics Sp. z o.o.</h3>
+                    <p data-pl="Jesteśmy dynamicznie rozwijającą się firmą logistyczną z siedzibą w Polsce. Specjalizujemy się w świadczeniu kompleksowych usług transportowych i spedycyjnych na terenie całej Europy." data-en="We are a dynamically developing logistics company based in Poland. We specialize in providing comprehensive transport and forwarding services throughout Europe.">
+                        Jesteśmy dynamicznie rozwijającą się firmą logistyczną z siedzibą w Polsce. Specjalizujemy się w świadczeniu kompleksowych usług transportowych i spedycyjnych na terenie całej Europy.
+                    </p>
+                    <p data-pl="Nasz zespół profesjonalistów dba o to, aby każda przesyłka dotarła na czas i w idealnym stanie. Łączymy nowoczesne technologie z wieloletnim doświadczeniem branżowym, aby zapewnić naszym klientom najwyższą jakość usług." data-en="Our team of professionals ensures that every shipment arrives on time and in perfect condition. We combine modern technologies with years of industry experience to provide our clients with the highest quality services.">
+                        Nasz zespół profesjonalistów dba o to, aby każda przesyłka dotarła na czas i w idealnym stanie. Łączymy nowoczesne technologie z wieloletnim doświadczeniem branżowym, aby zapewnić naszym klientom najwyższą jakość usług.
+                    </p>
+                    
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span data-pl="Licencjonowany przewoźnik" data-en="Licensed carrier">Licencjonowany przewoźnik</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span data-pl="Ubezpieczone przesyłki" data-en="Insured shipments">Ubezpieczone przesyłki</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span data-pl="Śledzenie online" data-en="Online tracking">Śledzenie online</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span data-pl="Wsparcie 24/7" data-en="24/7 Support">Wsparcie 24/7</span>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="btn btn-primary" data-pl="Dowiedz się więcej" data-en="Learn more">
+                        <span>Dowiedz się więcej</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services section" id="services">
+        <div class="services-bg"></div>
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle" data-pl="Co oferujemy" data-en="What we offer">Co oferujemy</span>
+                <h2 class="section-title" data-pl="Nasze usługi" data-en="Our Services">Nasze usługi</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <i class="fas fa-truck-loading"></i>
+                    </div>
+                    <h3 data-pl="Transport drogowy" data-en="Road Transport">Transport drogowy</h3>
+                    <p data-pl="Oferujemy transport drogowy FTL i LTL na terenie Polski i całej Europy. Dysponujemy nowoczesną flotą pojazdów." data-en="We offer FTL and LTL road transport in Poland and throughout Europe. We have a modern fleet of vehicles.">
+                        Oferujemy transport drogowy FTL i LTL na terenie Polski i całej Europy. Dysponujemy nowoczesną flotą pojazdów.
+                    </p>
+                    <a href="#contact" class="service-link" data-pl="Dowiedz się więcej" data-en="Learn more">
+                        <span>Dowiedz się więcej</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="fas fa-boxes"></i>
+                    </div>
+                    <h3 data-pl="Spedycja międzynarodowa" data-en="International Freight">Spedycja międzynarodowa</h3>
+                    <p data-pl="Organizujemy transport międzynarodowy door-to-door. Zajmujemy się wszystkimi formalnościami celnymi i dokumentacją." data-en="We organize door-to-door international transport. We handle all customs formalities and documentation.">
+                        Organizujemy transport międzynarodowy door-to-door. Zajmujemy się wszystkimi formalnościami celnymi i dokumentacją.
+                    </p>
+                    <a href="#contact" class="service-link" data-pl="Dowiedz się więcej" data-en="Learn more">
+                        <span>Dowiedz się więcej</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <i class="fas fa-warehouse"></i>
+                    </div>
+                    <h3 data-pl="Magazynowanie" data-en="Warehousing">Magazynowanie</h3>
+                    <p data-pl="Zapewniamy bezpieczne przechowywanie towarów w nowoczesnych magazynach z pełnym systemem zarządzania." data-en="We provide safe storage of goods in modern warehouses with a complete management system.">
+                        Zapewniamy bezpieczne przechowywanie towarów w nowoczesnych magazynach z pełnym systemem zarządzania.
+                    </p>
+                    <a href="#contact" class="service-link" data-pl="Dowiedz się więcej" data-en="Learn more">
+                        <span>Dowiedz się więcej</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <h3 data-pl="Obsługa celna" data-en="Customs Services">Obsługa celna</h3>
+                    <p data-pl="Kompleksowa obsługa celna importu i eksportu. Pomagamy w przygotowaniu dokumentacji i odprawach celnych." data-en="Comprehensive customs handling for import and export. We help with documentation and customs clearance.">
+                        Kompleksowa obsługa celna importu i eksportu. Pomagamy w przygotowaniu dokumentacji i odprawach celnych.
+                    </p>
+                    <a href="#contact" class="service-link" data-pl="Dowiedz się więcej" data-en="Learn more">
+                        <span>Dowiedz się więcej</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-icon">
+                        <i class="fas fa-temperature-low"></i>
+                    </div>
+                    <h3 data-pl="Transport chłodniczy" data-en="Refrigerated Transport">Transport chłodniczy</h3>
+                    <p data-pl="Specjalistyczny transport produktów wymagających kontrolowanej temperatury. Gwarantujemy zachowanie łańcucha chłodniczego." data-en="Specialized transport of products requiring controlled temperature. We guarantee cold chain maintenance.">
+                        Specjalistyczny transport produktów wymagających kontrolowanej temperatury. Gwarantujemy zachowanie łańcucha chłodniczego.
+                    </p>
+                    <a href="#contact" class="service-link" data-pl="Dowiedz się więcej" data-en="Learn more">
+                        <span>Dowiedz się więcej</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="service-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3 data-pl="Logistyka projektowa" data-en="Project Logistics">Logistyka projektowa</h3>
+                    <p data-pl="Realizujemy kompleksowe projekty logistyczne dostosowane do indywidualnych potrzeb klienta." data-en="We implement comprehensive logistics projects tailored to individual client needs.">
+                        Realizujemy kompleksowe projekty logistyczne dostosowane do indywidualnych potrzeb klienta.
+                    </p>
+                    <a href="#contact" class="service-link" data-pl="Dowiedz się więcej" data-en="Learn more">
+                        <span>Dowiedz się więcej</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section class="why-us section" id="why-us">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle" data-pl="Nasze atuty" data-en="Our advantages">Nasze atuty</span>
+                <h2 class="section-title" data-pl="Dlaczego warto nas wybrać?" data-en="Why choose us?">Dlaczego warto nas wybrać?</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="why-us-content">
+                <div class="why-us-grid">
+                    <div class="why-card" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="why-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h4 data-pl="Punktualność" data-en="Punctuality">Punktualność</h4>
+                        <p data-pl="Gwarantujemy terminową realizację każdego zlecenia" data-en="We guarantee timely execution of every order">Gwarantujemy terminową realizację każdego zlecenia</p>
+                    </div>
+                    
+                    <div class="why-card" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="why-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4 data-pl="Bezpieczeństwo" data-en="Safety">Bezpieczeństwo</h4>
+                        <p data-pl="Pełne ubezpieczenie wszystkich przewożonych towarów" data-en="Full insurance of all transported goods">Pełne ubezpieczenie wszystkich przewożonych towarów</p>
+                    </div>
+                    
+                    <div class="why-card" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="why-icon">
+                            <i class="fas fa-euro-sign"></i>
+                        </div>
+                        <h4 data-pl="Konkurencyjne ceny" data-en="Competitive prices">Konkurencyjne ceny</h4>
+                        <p data-pl="Atrakcyjne stawki przy zachowaniu najwyższej jakości" data-en="Attractive rates while maintaining the highest quality">Atrakcyjne stawki przy zachowaniu najwyższej jakości</p>
+                    </div>
+                    
+                    <div class="why-card" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="why-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h4 data-pl="Wsparcie 24/7" data-en="24/7 Support">Wsparcie 24/7</h4>
+                        <p data-pl="Nasz zespół jest dostępny przez całą dobę" data-en="Our team is available around the clock">Nasz zespół jest dostępny przez całą dobę</p>
+                    </div>
+                    
+                    <div class="why-card" data-aos="zoom-in" data-aos-delay="500">
+                        <div class="why-icon">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <h4 data-pl="Zasięg europejski" data-en="European reach">Zasięg europejski</h4>
+                        <p data-pl="Dostarczamy towary do wszystkich krajów Europy" data-en="We deliver goods to all European countries">Dostarczamy towary do wszystkich krajów Europy</p>
+                    </div>
+                    
+                    <div class="why-card" data-aos="zoom-in" data-aos-delay="600">
+                        <div class="why-icon">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <h4 data-pl="Technologie" data-en="Technology">Technologie</h4>
+                        <p data-pl="Nowoczesne systemy śledzenia i zarządzania" data-en="Modern tracking and management systems">Nowoczesne systemy śledzenia i zarządzania</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-overlay"></div>
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <h2 data-pl="Potrzebujesz niezawodnego partnera logistycznego?" data-en="Need a reliable logistics partner?">Potrzebujesz niezawodnego partnera logistycznego?</h2>
+                <p data-pl="Skontaktuj się z nami już dziś i otrzymaj bezpłatną wycenę transportu!" data-en="Contact us today and get a free shipping quote!">Skontaktuj się z nami już dziś i otrzymaj bezpłatną wycenę transportu!</p>
+                <div class="cta-buttons">
+                    <a href="tel:+48798173473" class="btn btn-light">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+48 798 173 473</span>
+                    </a>
+                    <a href="mailto:raido.logistics.pl@gmail.com" class="btn btn-outline-light">
+                        <i class="fas fa-envelope"></i>
+                        <span data-pl="Napisz do nas" data-en="Email us">Napisz do nas</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle" data-pl="Skontaktuj się" data-en="Get in touch">Skontaktuj się</span>
+                <h2 class="section-title" data-pl="Kontakt" data-en="Contact">Kontakt</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-card">
+                        <h3 data-pl="Dane kontaktowe" data-en="Contact Details">Dane kontaktowe</h3>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4 data-pl="Adres rejestracyjny" data-en="Registration Address">Adres rejestracyjny</h4>
+                                <p>74B, Podole 05-600<br>powiat grójecki, woj. mazowieckie<br>Polska</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4 data-pl="Telefon" data-en="Phone">Telefon</h4>
+                                <p>
+                                    <a href="tel:+48798173473">+48 798 173 473</a><br>
+                                    <a href="tel:+48883510572">+48 883 510 572</a>
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p><a href="mailto:raido.logistics.pl@gmail.com">raido.logistics.pl@gmail.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="company-details-card">
+                        <h3 data-pl="Dane firmy" data-en="Company Details">Dane firmy</h3>
+                        
+                        <div class="detail-row">
+                            <span class="detail-label">KRS:</span>
+                            <span class="detail-value">0001090073</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">NIP:</span>
+                            <span class="detail-value">7972086263</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">REGON:</span>
+                            <span class="detail-value">527873817</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label" data-pl="Sąd Rejestrowy:" data-en="Register Court:">Sąd Rejestrowy:</span>
+                            <span class="detail-value">Sąd w Lublinie</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bank-details-card">
+                        <h3 data-pl="Dane bankowe" data-en="Bank Details">Dane bankowe</h3>
+                        
+                        <div class="detail-row">
+                            <span class="detail-label">Bank:</span>
+                            <span class="detail-value">PKO Bank Polski S.A.</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">IBAN:</span>
+                            <span class="detail-value">PL18 1020 4317 0000 5802 0593 1888</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">SWIFT:</span>
+                            <span class="detail-value">BPKOPLPWXXX</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col footer-about">
+                        <a href="#home" class="footer-logo">
+                            <span class="logo-raido">RAIDO</span>
+                            <span class="logo-logistics">Logistics</span>
+                        </a>
+                        <p data-pl="Profesjonalne rozwiązania logistyczne dla Twojego biznesu. Zapewniamy niezawodny transport na terenie Polski i całej Europy." data-en="Professional logistics solutions for your business. We provide reliable transport in Poland and throughout Europe.">
+                            Profesjonalne rozwiązania logistyczne dla Twojego biznesu. Zapewniamy niezawodny transport na terenie Polski i całej Europy.
+                        </p>
+                        <div class="footer-social">
+                            <a href="#" class="social-link" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-link" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-col">
+                        <h4 data-pl="Szybkie linki" data-en="Quick Links">Szybkie linki</h4>
+                        <ul class="footer-links">
+                            <li><a href="#home" data-pl="Strona główna" data-en="Home">Strona główna</a></li>
+                            <li><a href="#about" data-pl="O nas" data-en="About">O nas</a></li>
+                            <li><a href="#services" data-pl="Usługi" data-en="Services">Usługi</a></li>
+                            <li><a href="#contact" data-pl="Kontakt" data-en="Contact">Kontakt</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-col">
+                        <h4 data-pl="Nasze usługi" data-en="Our Services">Nasze usługi</h4>
+                        <ul class="footer-links">
+                            <li><a href="#services" data-pl="Transport drogowy" data-en="Road Transport">Transport drogowy</a></li>
+                            <li><a href="#services" data-pl="Spedycja międzynarodowa" data-en="International Freight">Spedycja międzynarodowa</a></li>
+                            <li><a href="#services" data-pl="Magazynowanie" data-en="Warehousing">Magazynowanie</a></li>
+                            <li><a href="#services" data-pl="Obsługa celna" data-en="Customs Services">Obsługa celna</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-col">
+                        <h4 data-pl="Kontakt" data-en="Contact">Kontakt</h4>
+                        <ul class="footer-contact">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>74B, Podole 05-600, Polska</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone-alt"></i>
+                                <a href="tel:+48798173473">+48 798 173 473</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:raido.logistics.pl@gmail.com">raido.logistics.pl@gmail.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p class="copyright">
+                        © <span id="currentYear">2024</span> RAIDO Logistics Sp. z o.o. 
+                        <span data-pl="Wszelkie prawa zastrzeżone." data-en="All rights reserved.">Wszelkie prawa zastrzeżone.</span>
+                    </p>
+                    <div class="footer-legal">
+                        <span>KRS: 0001090073</span>
+                        <span>NIP: 7972086263</span>
+                        <span>REGON: 527873817</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

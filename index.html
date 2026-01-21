@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raido Site - Выбор версии</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            width: 90%;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .site-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .site-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            min-width: 200px;
+            text-align: center;
+        }
+
+        .site-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(45deg, #4ecdc4, #ff6b6b);
+        }
+
+        .site-button:active {
+            transform: translateY(-1px);
+        }
+
+        .site-button.site1 {
+            background: linear-gradient(45deg, #ff6b6b, #ffa726);
+        }
+
+        .site-button.site1:hover {
+            background: linear-gradient(45deg, #ffa726, #ff6b6b);
+        }
+
+        .site-button.site2 {
+            background: linear-gradient(45deg, #4ecdc4, #26a69a);
+        }
+
+        .site-button.site2:hover {
+            background: linear-gradient(45deg, #26a69a, #4ecdc4);
+        }
+
+        .site-button.site3 {
+            background: linear-gradient(45deg, #9c88ff, #6c5ce7);
+        }
+
+        .site-button.site3:hover {
+            background: linear-gradient(45deg, #6c5ce7, #9c88ff);
+        }
+
+        .description {
+            margin-top: 30px;
+            color: #666;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Raido Site</h1>
+        <p class="description">
+            Выберите версию сайта для просмотра
+        </p>
+
+        <div class="site-buttons">
+            <a href="site1/index.html" class="site-button site1">
+                Сайт 1
+            </a>
+            <a href="site2/index.html" class="site-button site2">
+                Сайт 2
+            </a>
+            <a href="site3/index.html" class="site-button site3">
+                Сайт 3
+            </a>
+        </div>
+    </div>
+</body>
+</html>
