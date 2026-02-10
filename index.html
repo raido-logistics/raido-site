@@ -1,1744 +1,2256 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RAIDO Logistics Sp.z O.O. | Profesjonalna Logistyka</title>
-    <meta name="description" content="RAIDO Logistics - profesjonalne usługi logistyczne i transportowe w Polsce i Europie">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Orbitron:wght@700;800;900&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <meta
+      name="description"
+      content="RAIDO Logistics - profesjonalne usługi logistyczne i transportowe w Polsce i Europie"
+    />
+    <meta name="author" content="RAIDO Logistics Sp. z O.O." />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0a1628" />
+
+    <!-- Canonical & hreflang -->
+    <link rel="canonical" href="https://www.raidologistics.pl/" />
+    <link rel="alternate" hreflang="pl" href="https://www.raidologistics.pl/" />
+    <link rel="alternate" hreflang="en" href="https://www.raidologistics.pl/" />
+    <link rel="alternate" hreflang="de" href="https://www.raidologistics.pl/" />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://www.raidologistics.pl/"
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.raidologistics.pl/" />
+    <meta
+      property="og:title"
+      content="RAIDO Logistics - Profesjonalna Logistyka i Transport"
+    />
+    <meta
+      property="og:description"
+      content="RAIDO Logistics - profesjonalne usługi logistyczne i transportowe w Polsce i Europie. FTL, LTL, transport ekspresowy."
+    />
+    <meta
+      property="og:image"
+      content="https://www.raidologistics.pl/assets/og-image.png"
+    />
+    <meta property="og:locale" content="pl_PL" />
+    <meta property="og:locale:alternate" content="en_GB" />
+    <meta property="og:locale:alternate" content="de_DE" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="RAIDO Logistics - Profesjonalna Logistyka i Transport"
+    />
+    <meta
+      name="twitter:description"
+      content="Profesjonalne usługi logistyczne i transportowe w Polsce i Europie."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.raidologistics.pl/assets/og-image.png"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon-96x96.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/apple-touch-icon.png"
+    />
+
+    <!-- Font Awesome (self-hosted) -->
+    <link rel="stylesheet" href="css/fontawesome.min.css" />
+
     <style>
-        /* Elektrakution Font */
-        @font-face {
-            font-family: 'Elektrakution';
-            src: url('fonts/Elektrakution-Regular.ttf') format('truetype');
-            font-weight: normal;
-            font-style: normal;
-            font-display: swap;
-        }
+      /* Elektrakution Font */
+      @font-face {
+        font-family: "Elektrakution";
+        src: url("fonts/Elektrakution-Regular.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
 
-        :root {
-            --primary: #0a1628;
-            --primary-light: #1a2d4a;
-            --accent: #f7941d;
-            --accent-hover: #ff6b00;
-            --text-light: #ffffff;
-            --text-dark: #333333;
-            --gradient-1: linear-gradient(135deg, #0a1628 0%, #1a3a5c 50%, #0a1628 100%);
-            --gradient-accent: linear-gradient(135deg, #f7941d 0%, #ff6b00 100%);
-            --shadow: 0 10px 40px rgba(0,0,0,0.3);
-            --shadow-light: 0 5px 20px rgba(247,148,29,0.3);
-        }
+      /* Montserrat (self-hosted) */
+      @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 300;
+        font-display: swap;
+        src: url("fonts/montserrat-latin.woff2") format("woff2");
+        unicode-range:
+          U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+          U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+          U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 300;
+        font-display: swap;
+        src: url("fonts/montserrat-latin-ext.woff2") format("woff2");
+        unicode-range:
+          U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
+          U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+          U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+      @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url("fonts/montserrat-latin.woff2") format("woff2");
+        unicode-range:
+          U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+          U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+          U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url("fonts/montserrat-latin-ext.woff2") format("woff2");
+        unicode-range:
+          U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
+          U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+          U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+      @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url("fonts/montserrat-latin.woff2") format("woff2");
+        unicode-range:
+          U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+          U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+          U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url("fonts/montserrat-latin-ext.woff2") format("woff2");
+        unicode-range:
+          U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
+          U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+          U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+      @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url("fonts/montserrat-latin.woff2") format("woff2");
+        unicode-range:
+          U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+          U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+          U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url("fonts/montserrat-latin-ext.woff2") format("woff2");
+        unicode-range:
+          U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
+          U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+          U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+      @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url("fonts/montserrat-latin.woff2") format("woff2");
+        unicode-range:
+          U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+          U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+          U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url("fonts/montserrat-latin-ext.woff2") format("woff2");
+        unicode-range:
+          U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
+          U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+          U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+      @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 800;
+        font-display: swap;
+        src: url("fonts/montserrat-latin.woff2") format("woff2");
+        unicode-range:
+          U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+          U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+          U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 800;
+        font-display: swap;
+        src: url("fonts/montserrat-latin-ext.woff2") format("woff2");
+        unicode-range:
+          U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
+          U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+          U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      /* Orbitron (self-hosted) */
+      @font-face {
+        font-family: "Orbitron";
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url("fonts/orbitron-latin.woff2") format("woff2");
+        unicode-range:
+          U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+          U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+          U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      @font-face {
+        font-family: "Orbitron";
+        font-style: normal;
+        font-weight: 800;
+        font-display: swap;
+        src: url("fonts/orbitron-latin.woff2") format("woff2");
+        unicode-range:
+          U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+          U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+          U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      @font-face {
+        font-family: "Orbitron";
+        font-style: normal;
+        font-weight: 900;
+        font-display: swap;
+        src: url("fonts/orbitron-latin.woff2") format("woff2");
+        unicode-range:
+          U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+          U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+          U+2212, U+2215, U+FEFF, U+FFFD;
+      }
 
-        html {
-            scroll-behavior: smooth;
-        }
+      /* Skip navigation link (accessibility) */
+      .skip-link {
+        position: absolute;
+        top: -40px;
+        left: 0;
+        background: var(--accent, #f7941d);
+        color: #fff;
+        padding: 8px 16px;
+        z-index: 100000;
+        font-size: 0.9rem;
+        text-decoration: none;
+        transition: top 0.3s;
+      }
+      .skip-link:focus {
+        top: 0;
+      }
 
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background: var(--primary);
-            color: var(--text-light);
-            overflow-x: hidden;
-            transition: opacity 0.15s ease;
-        }
+      :root {
+        --primary: #0a1628;
+        --primary-light: #1a2d4a;
+        --accent: #f7941d;
+        --accent-hover: #ff6b00;
+        --text-light: #ffffff;
+        --text-dark: #333333;
+        --gradient-1: linear-gradient(
+          135deg,
+          #0a1628 0%,
+          #1a3a5c 50%,
+          #0a1628 100%
+        );
+        --gradient-accent: linear-gradient(135deg, #f7941d 0%, #ff6b00 100%);
+        --shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        --shadow-light: 0 5px 20px rgba(247, 148, 29, 0.3);
+      }
 
-        /* Preloader */
-        .preloader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--primary);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 10000;
-            transition: opacity 0.5s, visibility 0.5s;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-        .preloader.hidden {
-            opacity: 0;
-            visibility: hidden;
-        }
+      html {
+        scroll-behavior: smooth;
+      }
 
-        .preloader-logo {
-            font-family: 'Elektrakution', 'Orbitron', monospace;
-            font-size: 3rem;
-            font-weight: normal;
-            color: var(--accent);
-            animation: pulse 1.5s infinite;
-        }
+      body {
+        font-family: "Montserrat", sans-serif;
+        background: var(--primary);
+        color: var(--text-light);
+        overflow-x: hidden;
+        transition: opacity 0.15s ease;
+      }
 
-        @keyframes pulse {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.5; transform: scale(0.95); }
-        }
+      /* Preloader */
+      .preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--primary);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10000;
+        transition:
+          opacity 0.5s,
+          visibility 0.5s;
+      }
 
-        /* Navigation */
+      .preloader.hidden {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      .preloader-logo {
+        font-family: "Elektrakution", "Orbitron", monospace;
+        font-size: 3rem;
+        font-weight: normal;
+        color: var(--accent);
+        animation: pulse 1.5s infinite;
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 0.5;
+          transform: scale(0.95);
+        }
+      }
+
+      /* Navigation */
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 1rem 5%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1000;
+        transition: all 0.3s ease;
+        background: transparent;
+      }
+
+      .navbar.scrolled {
+        background: rgba(10, 22, 40, 0.95);
+        backdrop-filter: blur(10px);
+        padding: 0.8rem 5%;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      .logo {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-decoration: none !important;
+        color: inherit;
+      }
+
+      .logo-main {
+        font-family: "Elektrakution", "Orbitron", monospace;
+        font-size: 1.8rem;
+        font-weight: normal;
+        color: var(--accent);
+        letter-spacing: 4px;
+        text-decoration: none !important;
+        text-shadow: 0 0 20px rgba(247, 148, 29, 0.5);
+      }
+
+      .logo-sub {
+        font-size: 0.7rem;
+        font-weight: 300;
+        letter-spacing: 3px;
+        color: rgba(255, 255, 255, 0.7);
+        margin-top: 2px;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 2.5rem;
+        list-style: none;
+      }
+
+      .nav-links a {
+        color: var(--text-light);
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+        transition: color 0.3s;
+        position: relative;
+      }
+
+      .nav-links a::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: var(--accent);
+        transition: width 0.3s;
+      }
+
+      .nav-links a:hover::after {
+        width: 100%;
+      }
+
+      .nav-links a:hover {
+        color: var(--accent);
+      }
+
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        z-index: 1001;
+        background: none;
+        border: none;
+        padding: 0;
+      }
+
+      .hamburger span {
+        width: 30px;
+        height: 3px;
+        background: var(--accent);
+        transition: all 0.3s;
+      }
+
+      /* Language Switcher */
+      .language-switcher {
+        position: relative;
+        margin-left: 2rem;
+      }
+
+      .lang-current {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+        background: rgba(247, 148, 29, 0.1);
+        border: 1px solid rgba(247, 148, 29, 0.3);
+        border-radius: 25px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 0.85rem;
+        font-weight: 500;
+        color: var(--text-light);
+      }
+
+      .lang-current:hover {
+        background: rgba(247, 148, 29, 0.2);
+        border-color: var(--accent);
+      }
+
+      .lang-current .flag {
+        width: 22px;
+        height: 16px;
+        border-radius: 3px;
+        object-fit: cover;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+      }
+
+      .lang-current .lang-name {
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .lang-current .arrow {
+        font-size: 0.7rem;
+        transition: transform 0.3s ease;
+        margin-left: 0.3rem;
+        color: var(--accent);
+      }
+
+      .language-switcher.active .lang-current .arrow {
+        transform: rotate(180deg);
+      }
+
+      .lang-dropdown {
+        position: absolute;
+        top: calc(100% + 10px);
+        right: 0;
+        min-width: 160px;
+        background: var(--primary);
+        border: 1px solid rgba(247, 148, 29, 0.3);
+        border-radius: 15px;
+        padding: 0.5rem;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+        z-index: 1000;
+      }
+
+      .language-switcher.active .lang-dropdown {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      .lang-dropdown::before {
+        content: "";
+        position: absolute;
+        top: -6px;
+        right: 20px;
+        width: 12px;
+        height: 12px;
+        background: var(--primary);
+        border-left: 1px solid rgba(247, 148, 29, 0.3);
+        border-top: 1px solid rgba(247, 148, 29, 0.3);
+        transform: rotate(45deg);
+      }
+
+      .lang-option {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem 1rem;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      .lang-option:hover {
+        background: rgba(247, 148, 29, 0.15);
+        color: var(--text-light);
+      }
+
+      .lang-option.active {
+        background: var(--gradient-accent);
+        color: var(--text-light);
+      }
+
+      .lang-option .flag {
+        width: 24px;
+        height: 18px;
+        border-radius: 3px;
+        object-fit: cover;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+      }
+
+      .lang-option .lang-full-name {
+        flex: 1;
+      }
+
+      .lang-option .check {
+        opacity: 0;
+        color: var(--text-light);
+        font-size: 0.8rem;
+      }
+
+      .lang-option.active .check {
+        opacity: 1;
+      }
+
+      @media (max-width: 768px) {
         .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            padding: 1rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 1000;
-            transition: all 0.3s ease;
-            background: transparent;
+          display: flex;
+          flex-wrap: nowrap;
         }
 
-        .navbar.scrolled {
-            background: rgba(10, 22, 40, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 0.8rem 5%;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.3);
-        }
-
-        .logo {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            text-decoration: none !important;
-            color: inherit;
-        }
-
-        .logo-main {
-            font-family: 'Elektrakution', 'Orbitron', monospace;
-            font-size: 1.8rem;
-            font-weight: normal;
-            color: var(--accent);
-            letter-spacing: 4px;
-            text-decoration: none !important;
-            text-shadow: 0 0 20px rgba(247,148,29,0.5);
-        }
-
-        .logo-sub {
-            font-size: 0.7rem;
-            font-weight: 300;
-            letter-spacing: 3px;
-            color: rgba(255,255,255,0.7);
-            margin-top: 2px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2.5rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--text-light);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.9rem;
-            letter-spacing: 1px;
-            transition: color 0.3s;
-            position: relative;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--accent);
-            transition: width 0.3s;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        .nav-links a:hover {
-            color: var(--accent);
+        .language-switcher {
+          margin-left: auto;
+          margin-right: 1rem;
+          order: 1;
         }
 
         .hamburger {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            cursor: pointer;
-            z-index: 1001;
-        }
-
-        .hamburger span {
-            width: 30px;
-            height: 3px;
-            background: var(--accent);
-            transition: all 0.3s;
-        }
-
-        /* Language Switcher */
-        .language-switcher {
-            position: relative;
-            margin-left: 2rem;
-        }
-
-        .lang-current {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.5rem 1rem;
-            background: rgba(247, 148, 29, 0.1);
-            border: 1px solid rgba(247, 148, 29, 0.3);
-            border-radius: 25px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 0.85rem;
-            font-weight: 500;
-            color: var(--text-light);
-        }
-
-        .lang-current:hover {
-            background: rgba(247, 148, 29, 0.2);
-            border-color: var(--accent);
-        }
-
-        .lang-current .flag {
-            width: 22px;
-            height: 16px;
-            border-radius: 3px;
-            object-fit: cover;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.3);
-        }
-
-        .lang-current .lang-name {
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .lang-current .arrow {
-            font-size: 0.7rem;
-            transition: transform 0.3s ease;
-            margin-left: 0.3rem;
-            color: var(--accent);
-        }
-
-        .language-switcher.active .lang-current .arrow {
-            transform: rotate(180deg);
+          order: 2;
         }
 
         .lang-dropdown {
-            position: absolute;
-            top: calc(100% + 10px);
-            right: 0;
-            min-width: 160px;
-            background: var(--primary);
-            border: 1px solid rgba(247, 148, 29, 0.3);
-            border-radius: 15px;
-            padding: 0.5rem;
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(-10px);
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.4);
-            z-index: 1000;
-        }
-
-        .language-switcher.active .lang-dropdown {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-
-        .lang-dropdown::before {
-            content: '';
-            position: absolute;
-            top: -6px;
-            right: 20px;
-            width: 12px;
-            height: 12px;
-            background: var(--primary);
-            border-left: 1px solid rgba(247, 148, 29, 0.3);
-            border-top: 1px solid rgba(247, 148, 29, 0.3);
-            transform: rotate(45deg);
-        }
-
-        .lang-option {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            padding: 0.75rem 1rem;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            font-size: 0.9rem;
-            color: rgba(255,255,255,0.8);
-        }
-
-        .lang-option:hover {
-            background: rgba(247, 148, 29, 0.15);
-            color: var(--text-light);
-        }
-
-        .lang-option.active {
-            background: var(--gradient-accent);
-            color: var(--text-light);
-        }
-
-        .lang-option .flag {
-            width: 24px;
-            height: 18px;
-            border-radius: 3px;
-            object-fit: cover;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.3);
-        }
-
-        .lang-option .lang-full-name {
-            flex: 1;
-        }
-
-        .lang-option .check {
-            opacity: 0;
-            color: var(--text-light);
-            font-size: 0.8rem;
-        }
-
-        .lang-option.active .check {
-            opacity: 1;
-        }
-
-        @media (max-width: 768px) {
-            .navbar {
-                display: flex;
-                flex-wrap: nowrap;
-            }
-
-            .language-switcher {
-                margin-left: auto;
-                margin-right: 1rem;
-                order: 1;
-            }
-
-            .hamburger {
-                order: 2;
-            }
-
-            .lang-dropdown {
-                right: -10px;
-            }
-
-            .lang-current .lang-name {
-                display: none;
-            }
-
-            .lang-current {
-                padding: 0.5rem 0.75rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .lang-dropdown {
-                min-width: 140px;
-            }
-        }
-
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-            background: var(--gradient-1);
-        }
-
-        .hero-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-        }
-
-        .hero-bg::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(247,148,29,0.05)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-            opacity: 0.5;
-        }
-
-        .floating-shapes {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-        }
-
-        .shape {
-            position: absolute;
-            opacity: 0.1;
-            animation: float 20s infinite ease-in-out;
-        }
-
-        .shape-1 {
-            width: 300px;
-            height: 300px;
-            background: var(--accent);
-            border-radius: 50%;
-            top: -100px;
-            right: -100px;
-            animation-delay: 0s;
-        }
-
-        .shape-2 {
-            width: 200px;
-            height: 200px;
-            background: var(--accent);
-            border-radius: 50%;
-            bottom: -50px;
-            left: -50px;
-            animation-delay: -5s;
-        }
-
-        .shape-3 {
-            width: 150px;
-            height: 150px;
-            background: var(--accent);
-            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-            top: 50%;
-            left: 10%;
-            animation-delay: -10s;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            25% { transform: translateY(-20px) rotate(5deg); }
-            50% { transform: translateY(0) rotate(0deg); }
-            75% { transform: translateY(20px) rotate(-5deg); }
-        }
-
-        .hero-content {
-            text-align: center;
-            z-index: 10;
-            padding: 0 2rem;
-        }
-
-        .hero-logo {
-            margin-bottom: 2rem;
-        }
-
-        .hero-logo-text {
-            font-family: 'Elektrakution', 'Orbitron', monospace;
-            font-size: clamp(3rem, 10vw, 6rem);
-            font-weight: normal;
-            color: var(--accent);
-            letter-spacing: 10px;
-            text-shadow: 0 0 50px rgba(247,148,29,0.5);
-            animation: glow 2s ease-in-out infinite alternate;
-        }
-
-        @keyframes glow {
-            from { text-shadow: 0 0 30px rgba(247,148,29,0.3); }
-            to { text-shadow: 0 0 60px rgba(247,148,29,0.6), 0 0 100px rgba(247,148,29,0.3); }
-        }
-
-        .hero-logo-sub {
-            font-size: clamp(1rem, 3vw, 1.5rem);
-            font-weight: 300;
-            letter-spacing: 8px;
-            color: rgba(255,255,255,0.8);
-            margin-top: 0.5rem;
-        }
-
-        .hero-tagline {
-            font-size: clamp(1.2rem, 3vw, 1.8rem);
-            font-weight: 300;
-            color: rgba(255,255,255,0.9);
-            margin: 2rem 0;
-            line-height: 1.6;
-        }
-
-        .hero-tagline span {
-            color: var(--accent);
-            font-weight: 600;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 3rem;
-        }
-
-        .btn {
-            padding: 1rem 2.5rem;
-            font-size: 0.9rem;
-            font-weight: 600;
-            text-decoration: none;
-            border-radius: 50px;
-            transition: all 0.3s ease;
-            letter-spacing: 1px;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            cursor: pointer;
-            border: none;
-        }
-
-        .btn-primary {
-            background: var(--gradient-accent);
-            color: var(--text-light);
-            box-shadow: var(--shadow-light);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(247,148,29,0.4);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--text-light);
-            border: 2px solid rgba(255,255,255,0.3);
-        }
-
-        .btn-secondary:hover {
-            border-color: var(--accent);
-            color: var(--accent);
-            transform: translateY(-3px);
-        }
-
-        .scroll-indicator {
-            position: absolute;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            animation: bounce 2s infinite;
-        }
-
-        .scroll-indicator i {
-            font-size: 2rem;
-            color: var(--accent);
-        }
-
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
-            40% { transform: translateX(-50%) translateY(-20px); }
-            60% { transform: translateX(-50%) translateY(-10px); }
-        }
-
-        /* Sections */
-        section {
-            padding: 6rem 5%;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .section-header h2 {
-            font-size: clamp(2rem, 5vw, 3rem);
-            font-weight: 700;
-            margin-bottom: 1rem;
-            position: relative;
-            display: inline-block;
-        }
-
-        .section-header h2::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: var(--gradient-accent);
-            border-radius: 2px;
-        }
-
-        .section-header p {
-            font-size: 1.1rem;
-            color: rgba(255,255,255,0.7);
-            max-width: 600px;
-            margin: 1.5rem auto 0;
-            line-height: 1.8;
-        }
-
-        /* About Section */
-        .about {
-            background: var(--primary-light);
-            position: relative;
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .about-text h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            color: var(--accent);
-        }
-
-        .about-text p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: rgba(255,255,255,0.8);
-            margin-bottom: 1.5rem;
-        }
-
-        .about-features {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .feature-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .feature-item i {
-            font-size: 1.5rem;
-            color: var(--accent);
-        }
-
-        .feature-item span {
-            font-weight: 500;
-        }
-
-        .about-image {
-            position: relative;
-        }
-
-        .about-image-main {
-            width: 100%;
-            height: 400px;
-            background: var(--gradient-accent);
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .about-image-main i {
-            font-size: 8rem;
-            color: rgba(255,255,255,0.3);
-        }
-
-        .about-image-main::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
-            animation: shimmer 3s infinite;
-        }
-
-        @keyframes shimmer {
-            0% { transform: translateX(-100%) rotate(45deg); }
-            100% { transform: translateX(100%) rotate(45deg); }
-        }
-
-        .stats-box {
-            position: absolute;
-            bottom: -30px;
-            right: -30px;
-            background: var(--primary);
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: var(--shadow);
-        }
-
-        .stats-box .stat {
-            text-align: center;
-        }
-
-        .stats-box .stat-number {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--accent);
-        }
-
-        .stats-box .stat-label {
-            font-size: 0.9rem;
-            color: rgba(255,255,255,0.7);
-        }
-
-        /* Services Section */
-        .services {
-            background: var(--primary);
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .service-card {
-            background: var(--primary-light);
-            padding: 2.5rem;
-            border-radius: 20px;
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-            border: 1px solid rgba(247,148,29,0.1);
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: var(--gradient-accent);
-            transform: scaleX(0);
-            transition: transform 0.4s ease;
-        }
-
-        .service-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow);
-            border-color: rgba(247,148,29,0.3);
-        }
-
-        .service-icon {
-            width: 80px;
-            height: 80px;
-            background: var(--gradient-accent);
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-        }
-
-        .service-icon i {
-            font-size: 2rem;
-            color: var(--text-light);
-        }
-
-        .service-card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
-            color: var(--text-light);
-        }
-
-        .service-card p {
-            color: rgba(255,255,255,0.7);
-            line-height: 1.7;
-        }
-
-        /* Why Us Section */
-        .why-us {
-            background: var(--primary-light);
-        }
-
+          right: -10px;
+        }
+
+        .lang-current .lang-name {
+          display: none;
+        }
+
+        .lang-current {
+          padding: 0.5rem 0.75rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .lang-dropdown {
+          min-width: 140px;
+        }
+      }
+
+      /* Hero Section */
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        background: var(--gradient-1);
+      }
+
+      .hero-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      .hero-bg::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(247,148,29,0.05)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+        opacity: 0.5;
+      }
+
+      .floating-shapes {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+
+      .shape {
+        position: absolute;
+        opacity: 0.1;
+        animation: float 20s infinite ease-in-out;
+      }
+
+      .shape-1 {
+        width: 300px;
+        height: 300px;
+        background: var(--accent);
+        border-radius: 50%;
+        top: -100px;
+        right: -100px;
+        animation-delay: 0s;
+      }
+
+      .shape-2 {
+        width: 200px;
+        height: 200px;
+        background: var(--accent);
+        border-radius: 50%;
+        bottom: -50px;
+        left: -50px;
+        animation-delay: -5s;
+      }
+
+      .shape-3 {
+        width: 150px;
+        height: 150px;
+        background: var(--accent);
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        top: 50%;
+        left: 10%;
+        animation-delay: -10s;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0) rotate(0deg);
+        }
+        25% {
+          transform: translateY(-20px) rotate(5deg);
+        }
+        50% {
+          transform: translateY(0) rotate(0deg);
+        }
+        75% {
+          transform: translateY(20px) rotate(-5deg);
+        }
+      }
+
+      .hero-content {
+        text-align: center;
+        z-index: 10;
+        padding: 0 2rem;
+      }
+
+      .hero-logo {
+        margin-bottom: 2rem;
+      }
+
+      .hero-logo-text {
+        font-family: "Elektrakution", "Orbitron", monospace;
+        font-size: clamp(3rem, 10vw, 6rem);
+        font-weight: normal;
+        color: var(--accent);
+        letter-spacing: 10px;
+        text-shadow: 0 0 50px rgba(247, 148, 29, 0.5);
+        animation: glow 2s ease-in-out infinite alternate;
+      }
+
+      @keyframes glow {
+        from {
+          text-shadow: 0 0 30px rgba(247, 148, 29, 0.3);
+        }
+        to {
+          text-shadow:
+            0 0 60px rgba(247, 148, 29, 0.6),
+            0 0 100px rgba(247, 148, 29, 0.3);
+        }
+      }
+
+      .hero-logo-sub {
+        font-size: clamp(1rem, 3vw, 1.5rem);
+        font-weight: 300;
+        letter-spacing: 8px;
+        color: rgba(255, 255, 255, 0.8);
+        margin-top: 0.5rem;
+      }
+
+      .hero-tagline {
+        font-size: clamp(1.2rem, 3vw, 1.8rem);
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.9);
+        margin: 2rem 0;
+        line-height: 1.6;
+      }
+
+      .hero-tagline span {
+        color: var(--accent);
+        font-weight: 600;
+      }
+
+      .hero-buttons {
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 3rem;
+      }
+
+      .btn {
+        padding: 1rem 2.5rem;
+        font-size: 0.9rem;
+        font-weight: 600;
+        text-decoration: none;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+        letter-spacing: 1px;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        cursor: pointer;
+        border: none;
+      }
+
+      .btn-primary {
+        background: var(--gradient-accent);
+        color: var(--text-light);
+        box-shadow: var(--shadow-light);
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 40px rgba(247, 148, 29, 0.4);
+      }
+
+      .btn-secondary {
+        background: transparent;
+        color: var(--text-light);
+        border: 2px solid rgba(255, 255, 255, 0.3);
+      }
+
+      .btn-secondary:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+        transform: translateY(-3px);
+      }
+
+      .scroll-indicator {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: bounce 2s infinite;
+      }
+
+      .scroll-indicator i {
+        font-size: 2rem;
+        color: var(--accent);
+      }
+
+      @keyframes bounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+          transform: translateX(-50%) translateY(0);
+        }
+        40% {
+          transform: translateX(-50%) translateY(-20px);
+        }
+        60% {
+          transform: translateX(-50%) translateY(-10px);
+        }
+      }
+
+      /* Sections */
+      section {
+        padding: 6rem 5%;
+      }
+
+      .section-header {
+        text-align: center;
+        margin-bottom: 4rem;
+      }
+
+      .section-header h2 {
+        font-size: clamp(2rem, 5vw, 3rem);
+        font-weight: 700;
+        margin-bottom: 1rem;
+        position: relative;
+        display: inline-block;
+      }
+
+      .section-header h2::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: var(--gradient-accent);
+        border-radius: 2px;
+      }
+
+      .section-header p {
+        font-size: 1.1rem;
+        color: rgba(255, 255, 255, 0.7);
+        max-width: 600px;
+        margin: 1.5rem auto 0;
+        line-height: 1.8;
+      }
+
+      /* About Section */
+      .about {
+        background: var(--primary-light);
+        position: relative;
+      }
+
+      .about-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      .about-text h3 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+        color: var(--accent);
+      }
+
+      .about-text p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 1.5rem;
+      }
+
+      .about-features {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        margin-top: 2rem;
+      }
+
+      .feature-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .feature-item i {
+        font-size: 1.5rem;
+        color: var(--accent);
+      }
+
+      .feature-item span {
+        font-weight: 500;
+      }
+
+      .about-image {
+        position: relative;
+      }
+
+      .about-image-main {
+        width: 100%;
+        height: 400px;
+        background: var(--gradient-accent);
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .about-image-main i {
+        font-size: 8rem;
+        color: rgba(255, 255, 255, 0.3);
+      }
+
+      .about-image-main::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(
+          45deg,
+          transparent,
+          rgba(255, 255, 255, 0.1),
+          transparent
+        );
+        animation: shimmer 3s infinite;
+      }
+
+      @keyframes shimmer {
+        0% {
+          transform: translateX(-100%) rotate(45deg);
+        }
+        100% {
+          transform: translateX(100%) rotate(45deg);
+        }
+      }
+
+      .stats-box {
+        position: absolute;
+        bottom: -30px;
+        right: -30px;
+        background: var(--primary);
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: var(--shadow);
+      }
+
+      .stats-box .stat {
+        text-align: center;
+      }
+
+      .stats-box .stat-number {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: var(--accent);
+      }
+
+      .stats-box .stat-label {
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      /* Services Section */
+      .services {
+        background: var(--primary);
+      }
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      .service-card {
+        background: var(--primary-light);
+        padding: 2.5rem;
+        border-radius: 20px;
+        transition: all 0.4s ease;
+        position: relative;
+        overflow: hidden;
+        border: 1px solid rgba(247, 148, 29, 0.1);
+      }
+
+      .service-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: var(--gradient-accent);
+        transform: scaleX(0);
+        transition: transform 0.4s ease;
+      }
+
+      .service-card:hover::before {
+        transform: scaleX(1);
+      }
+
+      .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: var(--shadow);
+        border-color: rgba(247, 148, 29, 0.3);
+      }
+
+      .service-icon {
+        width: 80px;
+        height: 80px;
+        background: var(--gradient-accent);
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+      }
+
+      .service-icon i {
+        font-size: 2rem;
+        color: var(--text-light);
+      }
+
+      .service-card h3 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+        color: var(--text-light);
+      }
+
+      .service-card p {
+        color: rgba(255, 255, 255, 0.7);
+        line-height: 1.7;
+      }
+
+      /* Why Us Section */
+      .why-us {
+        background: var(--primary-light);
+      }
+
+      .why-us-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      .why-card {
+        text-align: center;
+        padding: 2rem;
+      }
+
+      .why-card .icon-circle {
+        width: 100px;
+        height: 100px;
+        border: 3px solid var(--accent);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.5rem;
+        transition: all 0.3s ease;
+      }
+
+      .why-card:hover .icon-circle {
+        background: var(--accent);
+      }
+
+      .why-card .icon-circle i {
+        font-size: 2.5rem;
+        color: var(--accent);
+        transition: color 0.3s ease;
+      }
+
+      .why-card:hover .icon-circle i {
+        color: var(--text-light);
+      }
+
+      .why-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .why-card p {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.95rem;
+      }
+
+      /* Contact Section */
+      .contact {
+        background: var(--primary);
+      }
+
+      .contact-container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .contact-info {
+        padding: 2rem;
+      }
+
+      .contact-info h3 {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+        color: var(--accent);
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+        padding: 1.5rem;
+        background: var(--primary-light);
+        border-radius: 15px;
+        transition: transform 0.3s ease;
+      }
+
+      .contact-item:hover {
+        transform: translateX(10px);
+      }
+
+      .contact-item .icon {
+        width: 60px;
+        height: 60px;
+        background: var(--gradient-accent);
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+
+      .contact-item .icon i {
+        font-size: 1.5rem;
+        color: var(--text-light);
+      }
+
+      .contact-item .content h4 {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .contact-item .content p,
+      .contact-item .content a {
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+        line-height: 1.6;
+        display: block;
+      }
+
+      .contact-item .content a:hover {
+        color: var(--accent);
+      }
+
+      .contact-form-wrapper {
+        background: var(--primary-light);
+        padding: 3rem;
+        border-radius: 20px;
+      }
+
+      .contact-form h3 {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      .form-group input,
+      .form-group textarea {
+        width: 100%;
+        padding: 1rem 1.5rem;
+        background: var(--primary);
+        border: 2px solid transparent;
+        border-radius: 10px;
+        color: var(--text-light);
+        font-family: inherit;
+        font-size: 1rem;
+        transition: border-color 0.3s;
+      }
+
+      .form-group input:focus,
+      .form-group textarea:focus {
+        outline: none;
+        border-color: var(--accent);
+      }
+
+      .form-group textarea {
+        min-height: 150px;
+        resize: vertical;
+      }
+
+      /* Company Details Section */
+      .company-details {
+        background: var(--primary-light);
+      }
+
+      .details-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .details-grid .detail-card {
+        width: 100%;
+      }
+
+      .detail-card {
+        background: var(--primary);
+        padding: 2rem;
+        border-radius: 15px;
+        border: 1px solid rgba(247, 148, 29, 0.1);
+      }
+
+      .detail-card h3 {
+        font-size: 1.2rem;
+        color: var(--accent);
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .detail-card h3 i {
+        font-size: 1.5rem;
+      }
+
+      .detail-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.8rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .detail-item:last-child {
+        border-bottom: none;
+      }
+
+      .detail-item .label {
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      .detail-item .value {
+        font-weight: 600;
+        color: var(--text-light);
+        text-align: right;
+        word-break: break-all;
+      }
+
+      /* Footer */
+      footer {
+        background: var(--primary);
+        padding: 3rem 5% 1.5rem;
+        border-top: 1px solid rgba(247, 148, 29, 0.2);
+      }
+
+      .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      .footer-logo .logo-main {
+        font-size: 1.5rem;
+      }
+
+      .footer-links {
+        display: flex;
+        gap: 2rem;
+      }
+
+      .footer-links a {
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      .footer-links a:hover {
+        color: var(--accent);
+      }
+
+      .footer-legal {
+        margin-top: 1rem;
+      }
+
+      .footer-legal a {
+        color: rgba(255, 255, 255, 0.5);
+        text-decoration: none;
+        font-size: 0.85rem;
+        transition: color 0.3s;
+      }
+
+      .footer-legal a:hover {
+        color: var(--accent);
+      }
+
+      .footer-social {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .footer-social a {
+        width: 45px;
+        height: 45px;
+        background: var(--primary-light);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-light);
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .footer-social a:hover {
+        background: var(--accent);
+        transform: translateY(-3px);
+      }
+
+      .footer-bottom {
+        text-align: center;
+        margin-top: 2rem;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 0.9rem;
+      }
+
+      /* Mobile Responsive */
+      @media (max-width: 1024px) {
         .why-us-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .why-card {
-            text-align: center;
-            padding: 2rem;
-        }
-
-        .why-card .icon-circle {
-            width: 100px;
-            height: 100px;
-            border: 3px solid var(--accent);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-            transition: all 0.3s ease;
-        }
-
-        .why-card:hover .icon-circle {
-            background: var(--accent);
-        }
-
-        .why-card .icon-circle i {
-            font-size: 2.5rem;
-            color: var(--accent);
-            transition: color 0.3s ease;
-        }
-
-        .why-card:hover .icon-circle i {
-            color: var(--text-light);
-        }
-
-        .why-card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .why-card p {
-            color: rgba(255,255,255,0.7);
-            font-size: 0.95rem;
-        }
-
-        /* Contact Section */
-        .contact {
-            background: var(--primary);
-        }
-
-        .contact-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .contact-info {
-            padding: 2rem;
-        }
-
-        .contact-info h3 {
-            font-size: 1.8rem;
-            margin-bottom: 2rem;
-            color: var(--accent);
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-            padding: 1.5rem;
-            background: var(--primary-light);
-            border-radius: 15px;
-            transition: transform 0.3s ease;
-        }
-
-        .contact-item:hover {
-            transform: translateX(10px);
-        }
-
-        .contact-item .icon {
-            width: 60px;
-            height: 60px;
-            background: var(--gradient-accent);
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-
-        .contact-item .icon i {
-            font-size: 1.5rem;
-            color: var(--text-light);
-        }
-
-        .contact-item .content h4 {
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .contact-item .content p,
-        .contact-item .content a {
-            color: rgba(255,255,255,0.7);
-            text-decoration: none;
-            line-height: 1.6;
-            display: block;
-        }
-
-        .contact-item .content a:hover {
-            color: var(--accent);
-        }
-
-        .contact-form-wrapper {
-            background: var(--primary-light);
-            padding: 3rem;
-            border-radius: 20px;
-        }
-
-        .contact-form h3 {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-            color: rgba(255,255,255,0.8);
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 1rem 1.5rem;
-            background: var(--primary);
-            border: 2px solid transparent;
-            border-radius: 10px;
-            color: var(--text-light);
-            font-family: inherit;
-            font-size: 1rem;
-            transition: border-color 0.3s;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--accent);
-        }
-
-        .form-group textarea {
-            min-height: 150px;
-            resize: vertical;
-        }
-
-        /* Company Details Section */
-        .company-details {
-            background: var(--primary-light);
+          grid-template-columns: repeat(2, 1fr);
         }
 
         .details-grid {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1.5rem;
-            max-width: 800px;
-            margin: 0 auto;
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hamburger {
+          display: flex;
         }
 
-        .details-grid .detail-card {
-            width: 100%;
+        .nav-links {
+          position: fixed;
+          top: 0;
+          right: -100%;
+          width: 80%;
+          max-width: 400px;
+          height: 100vh;
+          background: var(--primary);
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          transition: right 0.3s ease;
+          box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3);
         }
 
-        .detail-card {
-            background: var(--primary);
-            padding: 2rem;
-            border-radius: 15px;
-            border: 1px solid rgba(247,148,29,0.1);
+        .nav-links.active {
+          right: 0;
         }
 
-        .detail-card h3 {
-            font-size: 1.2rem;
-            color: var(--accent);
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
+        .nav-links a {
+          font-size: 1.2rem;
         }
 
-        .detail-card h3 i {
-            font-size: 1.5rem;
+        .about-content {
+          grid-template-columns: 1fr;
         }
 
-        .detail-item {
-            display: flex;
-            justify-content: space-between;
-            padding: 0.8rem 0;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+        .about-image {
+          order: -1;
         }
 
-        .detail-item:last-child {
-            border-bottom: none;
+        .stats-box {
+          right: 20px;
+          bottom: -20px;
         }
 
-        .detail-item .label {
-            color: rgba(255,255,255,0.6);
+        .why-us-grid {
+          grid-template-columns: 1fr;
         }
 
-        .detail-item .value {
-            font-weight: 600;
-            color: var(--text-light);
-            text-align: right;
-            word-break: break-all;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--primary);
-            padding: 3rem 5% 1.5rem;
-            border-top: 1px solid rgba(247,148,29,0.2);
+        .about-features {
+          grid-template-columns: 1fr;
         }
 
         .footer-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 2rem;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .footer-logo .logo-main {
-            font-size: 1.5rem;
+          flex-direction: column;
+          text-align: center;
         }
 
         .footer-links {
-            display: flex;
-            gap: 2rem;
+          flex-direction: column;
+          gap: 1rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        section {
+          padding: 4rem 5%;
         }
 
-        .footer-links a {
-            color: rgba(255,255,255,0.7);
-            text-decoration: none;
-            transition: color 0.3s;
+        .hero-buttons {
+          flex-direction: column;
         }
 
-        .footer-links a:hover {
-            color: var(--accent);
+        .btn {
+          width: 100%;
+          justify-content: center;
         }
 
-        .footer-social {
-            display: flex;
-            gap: 1rem;
+        .service-card {
+          padding: 1.5rem;
         }
+      }
 
-        .footer-social a {
-            width: 45px;
-            height: 45px;
-            background: var(--primary-light);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-light);
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
+      /* Animations on scroll */
+      .fade-in {
+        opacity: 0;
+        transform: translateY(30px);
+        transition:
+          opacity 0.6s ease,
+          transform 0.6s ease;
+      }
 
-        .footer-social a:hover {
-            background: var(--accent);
-            transform: translateY(-3px);
-        }
-
-        .footer-bottom {
-            text-align: center;
-            margin-top: 2rem;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            color: rgba(255,255,255,0.5);
-            font-size: 0.9rem;
-        }
-
-        /* Mobile Responsive */
-        @media (max-width: 1024px) {
-            .why-us-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .details-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .hamburger {
-                display: flex;
-            }
-
-            .nav-links {
-                position: fixed;
-                top: 0;
-                right: -100%;
-                width: 80%;
-                max-width: 400px;
-                height: 100vh;
-                background: var(--primary);
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                transition: right 0.3s ease;
-                box-shadow: -10px 0 30px rgba(0,0,0,0.3);
-            }
-
-            .nav-links.active {
-                right: 0;
-            }
-
-            .nav-links a {
-                font-size: 1.2rem;
-            }
-
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-
-            .about-image {
-                order: -1;
-            }
-
-            .stats-box {
-                right: 20px;
-                bottom: -20px;
-            }
-
-
-            .why-us-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .about-features {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-content {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .footer-links {
-                flex-direction: column;
-                gap: 1rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            section {
-                padding: 4rem 5%;
-            }
-
-            .hero-buttons {
-                flex-direction: column;
-            }
-
-            .btn {
-                width: 100%;
-                justify-content: center;
-            }
-
-            .service-card {
-                padding: 1.5rem;
-            }
-        }
-
-        /* Animations on scroll */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Preloader -->
     <div class="preloader">
-        <div class="preloader-logo">RAIDO</div>
+      <div class="preloader-logo">RAIDO</div>
     </div>
 
+    <!-- Skip Navigation -->
+    <a href="#home" class="skip-link">Przejdź do treści</a>
+
     <!-- Navigation -->
-    <nav class="navbar">
-        <a href="#" class="logo">
-            <span class="logo-main">RAIDO</span>
-            <span class="logo-sub">LOGISTICS</span>
+    <header>
+      <nav class="navbar" role="navigation" aria-label="Nawigacja główna">
+        <a href="#" class="logo" aria-label="RAIDO Logistics - strona główna">
+          <span class="logo-main">RAIDO</span>
+          <span class="logo-sub">LOGISTICS</span>
         </a>
-        <ul class="nav-links">
-            <li><a href="#home" data-i18n="nav.home">Strona główna</a></li>
-            <li><a href="#about" data-i18n="nav.about">O nas</a></li>
-            <li><a href="#services" data-i18n="nav.services">Usługi</a></li>
-            <li><a href="#contact" data-i18n="nav.contact">Kontakt</a></li>
+        <ul class="nav-links" role="menubar">
+          <li role="none">
+            <a href="#home" role="menuitem" data-i18n="nav.home"
+              >Strona główna</a
+            >
+          </li>
+          <li role="none">
+            <a href="#about" role="menuitem" data-i18n="nav.about">O nas</a>
+          </li>
+          <li role="none">
+            <a href="#services" role="menuitem" data-i18n="nav.services"
+              >Usługi</a
+            >
+          </li>
+          <li role="none">
+            <a href="#contact" role="menuitem" data-i18n="nav.contact"
+              >Kontakt</a
+            >
+          </li>
         </ul>
         <div class="language-switcher" id="langSwitcher">
-            <div class="lang-current" onclick="toggleLangDropdown()">
-                <img src="https://flagcdn.com/w40/pl.png" alt="PL" class="flag" id="currentFlag">
-                <span class="lang-name" id="currentLang">PL</span>
-                <i class="fas fa-chevron-down arrow"></i>
+          <div
+            class="lang-current"
+            onclick="toggleLangDropdown()"
+            role="button"
+            aria-label="Zmień język"
+            aria-expanded="false"
+            tabindex="0"
+          >
+            <img
+              src="assets/flags/pl.png"
+              alt="PL"
+              class="flag"
+              id="currentFlag"
+              width="40"
+              height="27"
+            />
+            <span class="lang-name" id="currentLang">PL</span>
+            <i class="fas fa-chevron-down arrow"></i>
+          </div>
+          <div class="lang-dropdown" role="listbox" aria-label="Wybierz język">
+            <div
+              class="lang-option active"
+              data-lang="pl"
+              onclick="setLanguage('pl')"
+              role="option"
+              aria-selected="true"
+            >
+              <img
+                src="assets/flags/pl.png"
+                alt="Polski"
+                class="flag"
+                width="40"
+                height="27"
+              />
+              <span class="lang-full-name">Polski</span>
+              <i class="fas fa-check check"></i>
             </div>
-            <div class="lang-dropdown">
-                <div class="lang-option active" data-lang="pl" onclick="setLanguage('pl')">
-                    <img src="https://flagcdn.com/w40/pl.png" alt="Polski" class="flag">
-                    <span class="lang-full-name">Polski</span>
-                    <i class="fas fa-check check"></i>
-                </div>
-                <div class="lang-option" data-lang="en" onclick="setLanguage('en')">
-                    <img src="https://flagcdn.com/w40/gb.png" alt="English" class="flag">
-                    <span class="lang-full-name">English</span>
-                    <i class="fas fa-check check"></i>
-                </div>
-                <div class="lang-option" data-lang="de" onclick="setLanguage('de')">
-                    <img src="https://flagcdn.com/w40/de.png" alt="Deutsch" class="flag">
-                    <span class="lang-full-name">Deutsch</span>
-                    <i class="fas fa-check check"></i>
-                </div>
+            <div
+              class="lang-option"
+              data-lang="en"
+              onclick="setLanguage('en')"
+              role="option"
+              aria-selected="false"
+            >
+              <img
+                src="assets/flags/gb.png"
+                alt="English"
+                class="flag"
+                width="40"
+                height="27"
+              />
+              <span class="lang-full-name">English</span>
+              <i class="fas fa-check check"></i>
             </div>
+            <div
+              class="lang-option"
+              data-lang="de"
+              onclick="setLanguage('de')"
+              role="option"
+              aria-selected="false"
+            >
+              <img
+                src="assets/flags/de.png"
+                alt="Deutsch"
+                class="flag"
+                width="40"
+                height="27"
+              />
+              <span class="lang-full-name">Deutsch</span>
+              <i class="fas fa-check check"></i>
+            </div>
+          </div>
         </div>
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </nav>
+        <button
+          class="hamburger"
+          aria-label="Otwórz menu"
+          aria-expanded="false"
+          type="button"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
+    <main>
+      <!-- Hero Section -->
+      <section class="hero" id="home">
         <div class="hero-bg">
-            <div class="floating-shapes">
-                <div class="shape shape-1"></div>
-                <div class="shape shape-2"></div>
-                <div class="shape shape-3"></div>
-            </div>
+          <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+          </div>
         </div>
         <div class="hero-content">
-            <div class="hero-logo">
-                <div class="hero-logo-text">RAIDO</div>
-                <div class="hero-logo-sub">LOGISTICS</div>
-            </div>
-            <p class="hero-tagline" data-i18n="hero.tagline">
-                Profesjonalne usługi <span>transportowe i logistyczne</span><br>
-                w Polsce i całej Europie
-            </p>
-            <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary">
-                    <i class="fas fa-paper-plane"></i>
-                    <span data-i18n="hero.cta">Skontaktuj się</span>
-                </a>
-                <a href="#services" class="btn btn-secondary">
-                    <i class="fas fa-arrow-right"></i>
-                    <span data-i18n="hero.services">Nasze usługi</span>
-                </a>
-            </div>
+          <div class="hero-logo">
+            <div class="hero-logo-text">RAIDO</div>
+            <div class="hero-logo-sub">LOGISTICS</div>
+          </div>
+          <p class="hero-tagline" data-i18n="hero.tagline">
+            Profesjonalne usługi <span>transportowe i logistyczne</span><br />
+            w Polsce i całej Europie
+          </p>
+          <div class="hero-buttons">
+            <a href="#contact" class="btn btn-primary">
+              <i class="fas fa-paper-plane"></i>
+              <span data-i18n="hero.cta">Skontaktuj się</span>
+            </a>
+            <a href="#services" class="btn btn-secondary">
+              <i class="fas fa-arrow-right"></i>
+              <span data-i18n="hero.services">Nasze usługi</span>
+            </a>
+          </div>
         </div>
         <div class="scroll-indicator">
-            <i class="fas fa-chevron-down"></i>
+          <i class="fas fa-chevron-down"></i>
         </div>
-    </section>
+      </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
+      <!-- About Section -->
+      <section class="about" id="about">
         <div class="about-content">
-            <div class="about-text fade-in">
-                <h3 data-i18n="about.title">Kim jesteśmy?</h3>
-                <p data-i18n="about.text1">
-                    <strong>RAIDO Logistics Sp. z O.O.</strong> to dynamicznie rozwijająca się polska firma 
-                    logistyczna, specjalizująca się w profesjonalnym transporcie drogowym.
-                </p>
-                <p data-i18n="about.text2">
-                    Nasza nazwa pochodzi od starożytnej runy "Raido", symbolizującej podróż, ruch i postęp. 
-                    Wierzymy, że każda przesyłka to nie tylko transport, ale misja, którą realizujemy 
-                    z pełnym zaangażowaniem i profesjonalizmem.
-                </p>
+          <div class="about-text fade-in">
+            <h3 data-i18n="about.title">Kim jesteśmy?</h3>
+            <p data-i18n="about.text1">
+              <strong>RAIDO Logistics Sp. z O.O.</strong> to dynamicznie
+              rozwijająca się polska firma logistyczna, specjalizująca się w
+              profesjonalnym transporcie drogowym.
+            </p>
+            <p data-i18n="about.text2">
+              Nasza nazwa pochodzi od starożytnej runy "Raido", symbolizującej
+              podróż, ruch i postęp. Wierzymy, że każda przesyłka to nie tylko
+              transport, ale misja, którą realizujemy z pełnym zaangażowaniem i
+              profesjonalizmem.
+            </p>
+          </div>
+          <div class="about-image fade-in">
+            <div class="about-image-main">
+              <i class="fas fa-truck-fast"></i>
             </div>
-            <div class="about-image fade-in">
-                <div class="about-image-main">
-                    <i class="fas fa-truck-fast"></i>
-                </div>
-            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Services Section -->
-    <section class="services" id="services">
+      <!-- Services Section -->
+      <section class="services" id="services">
         <div class="section-header">
-            <h2 data-i18n="services.title">Nasze Usługi</h2>
-            <p data-i18n="services.subtitle">Oferujemy kompleksowe rozwiązania logistyczne dostosowane do Twoich potrzeb</p>
+          <h2 data-i18n="services.title">Nasze Usługi</h2>
+          <p data-i18n="services.subtitle">
+            Oferujemy kompleksowe rozwiązania logistyczne dostosowane do Twoich
+            potrzeb
+          </p>
         </div>
         <div class="services-grid">
-            <div class="service-card fade-in">
-                <div class="service-icon">
-                    <i class="fas fa-truck"></i>
-                </div>
-                <h3 data-i18n="services.road.title">Transport Drogowy</h3>
-                <p data-i18n="services.road.desc">Profesjonalny transport drogowy na terenie Polski i całej Europy. Gwarantujemy bezpieczną 
-                   i terminową dostawę Twoich towarów.</p>
+          <div class="service-card fade-in">
+            <div class="service-icon">
+              <i class="fas fa-truck"></i>
             </div>
-            <div class="service-card fade-in">
-                <div class="service-icon">
-                    <i class="fas fa-boxes-stacked"></i>
-                </div>
-                <h3 data-i18n="services.ftl.title">Ładunki Całopojazdowe (FTL)</h3>
-                <p data-i18n="services.ftl.desc">Transport całopojazdowy dla dużych przesyłek. Dedykowany pojazd tylko dla Twojego 
-                   ładunku z gwarancją szybkiej dostawy.</p>
+            <h3 data-i18n="services.road.title">Transport Drogowy</h3>
+            <p data-i18n="services.road.desc">
+              Profesjonalny transport drogowy na terenie Polski i całej Europy.
+              Gwarantujemy bezpieczną i terminową dostawę Twoich towarów.
+            </p>
+          </div>
+          <div class="service-card fade-in">
+            <div class="service-icon">
+              <i class="fas fa-boxes-stacked"></i>
             </div>
-            <div class="service-card fade-in">
-                <div class="service-icon">
-                    <i class="fas fa-cubes"></i>
-                </div>
-                <h3 data-i18n="services.ltl.title">Ładunki Częściowe (LTL)</h3>
-                <p data-i18n="services.ltl.desc">Ekonomiczne rozwiązanie dla mniejszych przesyłek. Łączymy ładunki różnych klientów, 
-                   optymalizując koszty transportu.</p>
+            <h3 data-i18n="services.ftl.title">Ładunki Całopojazdowe (FTL)</h3>
+            <p data-i18n="services.ftl.desc">
+              Transport całopojazdowy dla dużych przesyłek. Dedykowany pojazd
+              tylko dla Twojego ładunku z gwarancją szybkiej dostawy.
+            </p>
+          </div>
+          <div class="service-card fade-in">
+            <div class="service-icon">
+              <i class="fas fa-cubes"></i>
             </div>
-            <div class="service-card fade-in">
-                <div class="service-icon">
-                    <i class="fas fa-bolt"></i>
-                </div>
-                <h3 data-i18n="services.express.title">Transport Ekspresowy</h3>
-                <p data-i18n="services.express.desc">Pilne przesyłki? Oferujemy transport ekspresowy z gwarantowanym czasem dostawy. 
-                   Twoja przesyłka jest naszym priorytetem.</p>
+            <h3 data-i18n="services.ltl.title">Ładunki Częściowe (LTL)</h3>
+            <p data-i18n="services.ltl.desc">
+              Ekonomiczne rozwiązanie dla mniejszych przesyłek. Łączymy ładunki
+              różnych klientów, optymalizując koszty transportu.
+            </p>
+          </div>
+          <div class="service-card fade-in">
+            <div class="service-icon">
+              <i class="fas fa-bolt"></i>
             </div>
-            <div class="service-card fade-in">
-                <div class="service-icon">
-                    <i class="fas fa-headset"></i>
-                </div>
-                <h3 data-i18n="services.consulting.title">Doradztwo Logistyczne</h3>
-                <p data-i18n="services.consulting.desc">Pomagamy zoptymalizować Twoje procesy logistyczne. Znajdziemy najlepsze rozwiązanie 
-                   transportowe dla Twojego biznesu.</p>
+            <h3 data-i18n="services.express.title">Transport Ekspresowy</h3>
+            <p data-i18n="services.express.desc">
+              Pilne przesyłki? Oferujemy transport ekspresowy z gwarantowanym
+              czasem dostawy. Twoja przesyłka jest naszym priorytetem.
+            </p>
+          </div>
+          <div class="service-card fade-in">
+            <div class="service-icon">
+              <i class="fas fa-headset"></i>
             </div>
+            <h3 data-i18n="services.consulting.title">Doradztwo Logistyczne</h3>
+            <p data-i18n="services.consulting.desc">
+              Pomagamy zoptymalizować Twoje procesy logistyczne. Znajdziemy
+              najlepsze rozwiązanie transportowe dla Twojego biznesu.
+            </p>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Why Us Section -->
-    <section class="why-us">
+      <!-- Why Us Section -->
+      <section class="why-us">
         <div class="section-header">
-            <h2 data-i18n="why.title">Dlaczego My?</h2>
-            <p data-i18n="why.subtitle">Poznaj powody, dla których klienci nam ufają</p>
+          <h2 data-i18n="why.title">Dlaczego My?</h2>
+          <p data-i18n="why.subtitle">
+            Poznaj powody, dla których klienci nam ufają
+          </p>
         </div>
         <div class="why-us-grid">
-            <div class="why-card fade-in">
-                <div class="icon-circle">
-                    <i class="fas fa-clock"></i>
-                </div>
-                <h3 data-i18n="why.punctuality.title">Punktualność</h3>
-                <p data-i18n="why.punctuality.desc">Terminowa realizacja każdego zlecenia</p>
+          <div class="why-card fade-in">
+            <div class="icon-circle">
+              <i class="fas fa-clock"></i>
             </div>
-            <div class="why-card fade-in">
-                <div class="icon-circle">
-                    <i class="fas fa-shield-halved"></i>
-                </div>
-                <h3 data-i18n="why.safety.title">Bezpieczeństwo</h3>
-                <p data-i18n="why.safety.desc">Pełne ubezpieczenie przewożonych towarów</p>
+            <h3 data-i18n="why.punctuality.title">Punktualność</h3>
+            <p data-i18n="why.punctuality.desc">
+              Terminowa realizacja każdego zlecenia
+            </p>
+          </div>
+          <div class="why-card fade-in">
+            <div class="icon-circle">
+              <i class="fas fa-shield-halved"></i>
             </div>
-            <div class="why-card fade-in">
-                <div class="icon-circle">
-                    <i class="fas fa-hand-holding-dollar"></i>
-                </div>
-                <h3 data-i18n="why.prices.title">Konkurencyjne Ceny</h3>
-                <p data-i18n="why.prices.desc">Atrakcyjne stawki bez ukrytych kosztów</p>
+            <h3 data-i18n="why.safety.title">Bezpieczeństwo</h3>
+            <p data-i18n="why.safety.desc">
+              Pełne ubezpieczenie przewożonych towarów
+            </p>
+          </div>
+          <div class="why-card fade-in">
+            <div class="icon-circle">
+              <i class="fas fa-hand-holding-dollar"></i>
             </div>
-            <div class="why-card fade-in">
-                <div class="icon-circle">
-                    <i class="fas fa-users"></i>
-                </div>
-                <h3 data-i18n="why.team.title">Doświadczony Zespół</h3>
-                <p data-i18n="why.team.desc">Profesjonaliści z wieloletnim stażem</p>
+            <h3 data-i18n="why.prices.title">Konkurencyjne Ceny</h3>
+            <p data-i18n="why.prices.desc">
+              Atrakcyjne stawki bez ukrytych kosztów
+            </p>
+          </div>
+          <div class="why-card fade-in">
+            <div class="icon-circle">
+              <i class="fas fa-users"></i>
             </div>
+            <h3 data-i18n="why.team.title">Doświadczony Zespół</h3>
+            <p data-i18n="why.team.desc">
+              Profesjonaliści z wieloletnim stażem
+            </p>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
+      <!-- Contact Section -->
+      <section class="contact" id="contact">
         <div class="section-header">
-            <h2 data-i18n="contact.title">Kontakt</h2>
-            <p data-i18n="contact.subtitle">Skontaktuj się z nami - odpowiemy na wszystkie Twoje pytania</p>
+          <h2 data-i18n="contact.title">Kontakt</h2>
+          <p data-i18n="contact.subtitle">
+            Skontaktuj się z nami - odpowiemy na wszystkie Twoje pytania
+          </p>
         </div>
         <div class="contact-container">
-            <div class="contact-info">
-                <h3 data-i18n="contact.info">Dane Kontaktowe</h3>
-                <div class="contact-item fade-in">
-                    <div class="icon">
-                        <i class="fas fa-location-dot"></i>
-                    </div>
-                    <div class="content">
-                        <h4 data-i18n="contact.address">Adres</h4>
-                        <p data-i18n="contact.addressValue">74B, Podole 05-600<br>powiat grójecki, woj. mazowieckie<br>Polska</p>
-                    </div>
-                </div>
-                <div class="contact-item fade-in">
-                    <div class="icon">
-                        <i class="fas fa-phone"></i>
-                    </div>
-                    <div class="content">
-                        <h4 data-i18n="contact.phone">Telefon</h4>
-                        <a href="tel:+48798173473">+48 798 173 473</a>
-                        <a href="tel:+48883510572">+48 883 510 572</a>
-                    </div>
-                </div>
-                <div class="contact-item fade-in">
-                    <div class="icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <div class="content">
-                        <h4>Email</h4>
-                        <a href="mailto:raido.logistics.pl@gmail.com">raido.logistics.pl@gmail.com</a>
-                    </div>
-                </div>
+          <div class="contact-info">
+            <h3 data-i18n="contact.info">Dane Kontaktowe</h3>
+            <div class="contact-item fade-in">
+              <div class="icon">
+                <i class="fas fa-location-dot"></i>
+              </div>
+              <div class="content">
+                <h4 data-i18n="contact.address">Adres</h4>
+                <p data-i18n="contact.addressValue">
+                  74B, Podole 05-600<br />powiat grójecki, woj. mazowieckie<br />Polska
+                </p>
+              </div>
             </div>
+            <div class="contact-item fade-in">
+              <div class="icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="content">
+                <h4 data-i18n="contact.phone">Telefon</h4>
+                <a href="tel:+48798173473">+48 798 173 473</a>
+                <a href="tel:+48883510572">+48 883 510 572</a>
+              </div>
+            </div>
+            <div class="contact-item fade-in">
+              <div class="icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="content">
+                <h4>Email</h4>
+                <a href="mailto:raido.logistics.pl@gmail.com"
+                  >raido.logistics.pl@gmail.com</a
+                >
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Company Details Section -->
-    <section class="company-details">
+      <!-- Company Details Section -->
+      <section class="company-details">
         <div class="section-header">
-            <h2 data-i18n="company.title">Dane Firmowe</h2>
-            <p data-i18n="company.subtitle">Pełne dane rejestracyjne i bankowe naszej firmy</p>
+          <h2 data-i18n="company.title">Dane Firmowe</h2>
+          <p data-i18n="company.subtitle">
+            Pełne dane rejestracyjne i bankowe naszej firmy
+          </p>
         </div>
         <div class="details-grid">
-            <div class="detail-card fade-in">
-                <h3><i class="fas fa-building"></i> <span data-i18n="company.registration">Dane Rejestrowe</span></h3>
-                <div class="detail-item">
-                    <span class="label" data-i18n="company.name">Nazwa firmy</span>
-                    <span class="value">RAIDO Logistics Sp. z O.O.</span>
-                </div>
-                <div class="detail-item">
-                    <span class="label">KRS</span>
-                    <span class="value">0001090073</span>
-                </div>
-                <div class="detail-item">
-                    <span class="label" data-i18n="company.court">Sąd Rejestrowy</span>
-                    <span class="value" data-i18n="company.courtValue">Sąd Rejestrowy w Lublinie</span>
-                </div>
+          <div class="detail-card fade-in">
+            <h3>
+              <i class="fas fa-building"></i>
+              <span data-i18n="company.registration">Dane Rejestrowe</span>
+            </h3>
+            <div class="detail-item">
+              <span class="label" data-i18n="company.name">Nazwa firmy</span>
+              <span class="value">RAIDO Logistics Sp. z O.O.</span>
             </div>
-            <div class="detail-card fade-in">
-                <h3><i class="fas fa-file-invoice"></i> <span data-i18n="company.tax">Dane Podatkowe</span></h3>
-                <div class="detail-item">
-                    <span class="label">NIP</span>
-                    <span class="value">7972086263</span>
-                </div>
-                <div class="detail-item">
-                    <span class="label">REGON</span>
-                    <span class="value">527873817</span>
-                </div>
+            <div class="detail-item">
+              <span class="label">KRS</span>
+              <span class="value">0001090073</span>
             </div>
+            <div class="detail-item">
+              <span class="label" data-i18n="company.court"
+                >Sąd Rejestrowy</span
+              >
+              <span class="value" data-i18n="company.courtValue"
+                >Sąd Rejestrowy w Lublinie</span
+              >
+            </div>
+          </div>
+          <div class="detail-card fade-in">
+            <h3>
+              <i class="fas fa-file-invoice"></i>
+              <span data-i18n="company.tax">Dane Podatkowe</span>
+            </h3>
+            <div class="detail-item">
+              <span class="label">NIP</span>
+              <span class="value">7972086263</span>
+            </div>
+            <div class="detail-item">
+              <span class="label">REGON</span>
+              <span class="value">527873817</span>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
+    </main>
 
     <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <div class="footer-logo logo">
-                <span class="logo-main">RAIDO</span>
-                <span class="logo-sub">LOGISTICS</span>
-            </div>
-            <div class="footer-links">
-                <a href="#home" data-i18n="nav.home">Strona główna</a>
-                <a href="#about" data-i18n="nav.about">O nas</a>
-                <a href="#services" data-i18n="nav.services">Usługi</a>
-                <a href="#contact" data-i18n="nav.contact">Kontakt</a>
-            </div>
+      <div class="footer-content">
+        <div class="footer-logo logo">
+          <span class="logo-main">RAIDO</span>
+          <span class="logo-sub">LOGISTICS</span>
         </div>
-        <div class="footer-bottom">
-            <p data-i18n="footer.copyright">&copy; 2024 RAIDO Logistics Sp. z O.O. Wszystkie prawa zastrzeżone.</p>
+        <div class="footer-links">
+          <a href="#home" data-i18n="nav.home">Strona główna</a>
+          <a href="#about" data-i18n="nav.about">O nas</a>
+          <a href="#services" data-i18n="nav.services">Usługi</a>
+          <a href="#contact" data-i18n="nav.contact">Kontakt</a>
         </div>
+        <div class="footer-legal">
+          <a href="privacy.html" data-i18n="footer.privacy"
+            >Polityka prywatności</a
+          >
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-i18n="footer.copyright">
+          &copy; 2024-2026 RAIDO Logistics Sp. z O.O. Wszystkie prawa
+          zastrzeżone.
+        </p>
+      </div>
     </footer>
 
     <script>
-        // Preloader
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                document.querySelector('.preloader').classList.add('hidden');
-            }, 1500);
+      // Preloader
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          document.querySelector(".preloader").classList.add("hidden");
+        }, 1500);
+      });
+
+      // Navbar scroll effect
+      window.addEventListener("scroll", () => {
+        const navbar = document.querySelector(".navbar");
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+
+      // Mobile menu
+      const hamburger = document.querySelector(".hamburger");
+      const navLinks = document.querySelector(".nav-links");
+
+      hamburger.addEventListener("click", () => {
+        const isOpen = navLinks.classList.toggle("active");
+        hamburger.classList.toggle("active");
+        hamburger.setAttribute("aria-expanded", isOpen);
+        hamburger.setAttribute(
+          "aria-label",
+          isOpen ? "Zamknij menu" : "Otwórz menu",
+        );
+      });
+
+      // Close mobile menu on link click
+      document.querySelectorAll(".nav-links a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navLinks.classList.remove("active");
+          hamburger.classList.remove("active");
         });
+      });
 
-        // Navbar scroll effect
-        window.addEventListener('scroll', () => {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
-        // Mobile menu
-        const hamburger = document.querySelector('.hamburger');
-        const navLinks = document.querySelector('.nav-links');
-
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            hamburger.classList.toggle('active');
-        });
-
-        // Close mobile menu on link click
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                hamburger.classList.remove('active');
-            });
-        });
-
-        // Scroll animations
+      // Scroll animations (with fallback for older browsers)
+      if ("IntersectionObserver" in window) {
         const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
+          threshold: 0.1,
+          rootMargin: "0px 0px -50px 0px",
         };
 
         const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
         }, observerOptions);
 
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
+        document.querySelectorAll(".fade-in").forEach((el) => {
+          observer.observe(el);
         });
+      } else {
+        // Fallback: show all elements immediately
+        document.querySelectorAll(".fade-in").forEach((el) => {
+          el.classList.add("visible");
+        });
+      }
 
-
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
             });
+          }
         });
+      });
 
-        // ===== LANGUAGE SYSTEM =====
-        const translations = {
-            pl: {
-                'nav.home': 'Strona główna',
-                'nav.about': 'O nas',
-                'nav.services': 'Usługi',
-                'nav.contact': 'Kontakt',
-                'hero.tagline': 'Profesjonalne usługi <span>transportowe i logistyczne</span><br>w Polsce i całej Europie',
-                'hero.cta': 'Skontaktuj się',
-                'hero.services': 'Nasze usługi',
-                'about.title': 'Kim jesteśmy?',
-                'about.text1': '<strong>RAIDO Logistics Sp. z O.O.</strong> to dynamicznie rozwijająca się polska firma logistyczna, specjalizująca się w profesjonalnym transporcie drogowym.',
-                'about.text2': 'Nasza nazwa pochodzi od starożytnej runy "Raido", symbolizującej podróż, ruch i postęp. Wierzymy, że każda przesyłka to nie tylko transport, ale misja, którą realizujemy z pełnym zaangażowaniem i profesjonalizmem.',
-                'services.title': 'Nasze Usługi',
-                'services.subtitle': 'Oferujemy kompleksowe rozwiązania logistyczne dostosowane do Twoich potrzeb',
-                'services.road.title': 'Transport Drogowy',
-                'services.road.desc': 'Profesjonalny transport drogowy na terenie Polski i całej Europy. Gwarantujemy bezpieczną i terminową dostawę Twoich towarów.',
-                'services.ftl.title': 'Ładunki Całopojazdowe (FTL)',
-                'services.ftl.desc': 'Transport całopojazdowy dla dużych przesyłek. Dedykowany pojazd tylko dla Twojego ładunku z gwarancją szybkiej dostawy.',
-                'services.ltl.title': 'Ładunki Częściowe (LTL)',
-                'services.ltl.desc': 'Ekonomiczne rozwiązanie dla mniejszych przesyłek. Łączymy ładunki różnych klientów, optymalizując koszty transportu.',
-                'services.express.title': 'Transport Ekspresowy',
-                'services.express.desc': 'Pilne przesyłki? Oferujemy transport ekspresowy z gwarantowanym czasem dostawy. Twoja przesyłka jest naszym priorytetem.',
-                'services.consulting.title': 'Doradztwo Logistyczne',
-                'services.consulting.desc': 'Pomagamy zoptymalizować Twoje procesy logistyczne. Znajdziemy najlepsze rozwiązanie transportowe dla Twojego biznesu.',
-                'why.title': 'Dlaczego My?',
-                'why.subtitle': 'Poznaj powody, dla których klienci nam ufają',
-                'why.punctuality.title': 'Punktualność',
-                'why.punctuality.desc': 'Terminowa realizacja każdego zlecenia',
-                'why.safety.title': 'Bezpieczeństwo',
-                'why.safety.desc': 'Pełne ubezpieczenie przewożonych towarów',
-                'why.prices.title': 'Konkurencyjne Ceny',
-                'why.prices.desc': 'Atrakcyjne stawki bez ukrytych kosztów',
-                'why.team.title': 'Doświadczony Zespół',
-                'why.team.desc': 'Profesjonaliści z wieloletnim stażem',
-                'contact.title': 'Kontakt',
-                'contact.subtitle': 'Skontaktuj się z nami - odpowiemy na wszystkie Twoje pytania',
-                'contact.info': 'Dane Kontaktowe',
-                'contact.address': 'Adres',
-                'contact.addressValue': '74B, Podole 05-600<br>powiat grójecki, woj. mazowieckie<br>Polska',
-                'contact.phone': 'Telefon',
-                'company.title': 'Dane Firmowe',
-                'company.subtitle': 'Pełne dane rejestracyjne i bankowe naszej firmy',
-                'company.registration': 'Dane Rejestrowe',
-                'company.name': 'Nazwa firmy',
-                'company.court': 'Sąd Rejestrowy',
-                'company.courtValue': 'Sąd Rejestrowy w Lublinie',
-                'company.tax': 'Dane Podatkowe',
-                'footer.copyright': '© 2024 RAIDO Logistics Sp. z O.O. Wszystkie prawa zastrzeżone.'
-            },
-            en: {
-                'nav.home': 'Home',
-                'nav.about': 'About Us',
-                'nav.services': 'Services',
-                'nav.contact': 'Contact',
-                'hero.tagline': 'Professional <span>transport and logistics</span> services<br>in Poland and throughout Europe',
-                'hero.cta': 'Contact Us',
-                'hero.services': 'Our Services',
-                'about.title': 'Who Are We?',
-                'about.text1': '<strong>RAIDO Logistics Sp. z O.O.</strong> is a dynamically growing Polish logistics company specializing in professional road transport.',
-                'about.text2': 'Our name comes from the ancient rune "Raido", symbolizing journey, movement, and progress. We believe that every shipment is not just transport, but a mission that we carry out with full commitment and professionalism.',
-                'services.title': 'Our Services',
-                'services.subtitle': 'We offer comprehensive logistics solutions tailored to your needs',
-                'services.road.title': 'Road Transport',
-                'services.road.desc': 'Professional road transport throughout Poland and Europe. We guarantee safe and timely delivery of your goods.',
-                'services.ftl.title': 'Full Truckload (FTL)',
-                'services.ftl.desc': 'Full truckload transport for large shipments. A dedicated vehicle just for your cargo with guaranteed fast delivery.',
-                'services.ltl.title': 'Less Than Truckload (LTL)',
-                'services.ltl.desc': 'Economical solution for smaller shipments. We combine loads from different customers, optimizing transport costs.',
-                'services.express.title': 'Express Transport',
-                'services.express.desc': 'Urgent shipments? We offer express transport with guaranteed delivery time. Your shipment is our priority.',
-                'services.consulting.title': 'Logistics Consulting',
-                'services.consulting.desc': 'We help optimize your logistics processes. We will find the best transport solution for your business.',
-                'why.title': 'Why Choose Us?',
-                'why.subtitle': 'Discover why customers trust us',
-                'why.punctuality.title': 'Punctuality',
-                'why.punctuality.desc': 'Timely completion of every order',
-                'why.safety.title': 'Safety',
-                'why.safety.desc': 'Full insurance of transported goods',
-                'why.prices.title': 'Competitive Prices',
-                'why.prices.desc': 'Attractive rates with no hidden costs',
-                'why.team.title': 'Experienced Team',
-                'why.team.desc': 'Professionals with years of experience',
-                'contact.title': 'Contact',
-                'contact.subtitle': 'Contact us - we will answer all your questions',
-                'contact.info': 'Contact Information',
-                'contact.address': 'Address',
-                'contact.addressValue': '74B, Podole 05-600<br>Grójec County, Mazowieckie Province<br>Poland',
-                'contact.phone': 'Phone',
-                'company.title': 'Company Details',
-                'company.subtitle': 'Full registration and banking details of our company',
-                'company.registration': 'Registration Data',
-                'company.name': 'Company Name',
-                'company.court': 'Registry Court',
-                'company.courtValue': 'Registry Court in Lublin',
-                'company.tax': 'Tax Data',
-                'footer.copyright': '© 2024 RAIDO Logistics Sp. z O.O. All rights reserved.'
-            },
-            de: {
-                'nav.home': 'Startseite',
-                'nav.about': 'Über Uns',
-                'nav.services': 'Dienstleistungen',
-                'nav.contact': 'Kontakt',
-                'hero.tagline': 'Professionelle <span>Transport- und Logistik</span>dienstleistungen<br>in Polen und ganz Europa',
-                'hero.cta': 'Kontaktieren Sie uns',
-                'hero.services': 'Unsere Leistungen',
-                'about.title': 'Wer sind wir?',
-                'about.text1': '<strong>RAIDO Logistics Sp. z O.O.</strong> ist ein dynamisch wachsendes polnisches Logistikunternehmen, das sich auf professionellen Straßentransport spezialisiert hat.',
-                'about.text2': 'Unser Name stammt von der alten Rune "Raido", die Reise, Bewegung und Fortschritt symbolisiert. Wir glauben, dass jede Sendung nicht nur Transport ist, sondern eine Mission, die wir mit vollem Engagement und Professionalität erfüllen.',
-                'services.title': 'Unsere Dienstleistungen',
-                'services.subtitle': 'Wir bieten umfassende Logistiklösungen, die auf Ihre Bedürfnisse zugeschnitten sind',
-                'services.road.title': 'Straßentransport',
-                'services.road.desc': 'Professioneller Straßentransport in ganz Polen und Europa. Wir garantieren sichere und pünktliche Lieferung Ihrer Waren.',
-                'services.ftl.title': 'Komplettladung (FTL)',
-                'services.ftl.desc': 'Komplettladungstransport für große Sendungen. Ein dediziertes Fahrzeug nur für Ihre Fracht mit garantiert schneller Lieferung.',
-                'services.ltl.title': 'Teilladung (LTL)',
-                'services.ltl.desc': 'Wirtschaftliche Lösung für kleinere Sendungen. Wir kombinieren Ladungen verschiedener Kunden und optimieren die Transportkosten.',
-                'services.express.title': 'Expresstransport',
-                'services.express.desc': 'Dringende Sendungen? Wir bieten Expresstransport mit garantierter Lieferzeit. Ihre Sendung ist unsere Priorität.',
-                'services.consulting.title': 'Logistikberatung',
-                'services.consulting.desc': 'Wir helfen bei der Optimierung Ihrer Logistikprozesse. Wir finden die beste Transportlösung für Ihr Unternehmen.',
-                'why.title': 'Warum Wir?',
-                'why.subtitle': 'Erfahren Sie, warum Kunden uns vertrauen',
-                'why.punctuality.title': 'Pünktlichkeit',
-                'why.punctuality.desc': 'Termingerechte Ausführung jedes Auftrags',
-                'why.safety.title': 'Sicherheit',
-                'why.safety.desc': 'Vollversicherung der transportierten Waren',
-                'why.prices.title': 'Wettbewerbsfähige Preise',
-                'why.prices.desc': 'Attraktive Tarife ohne versteckte Kosten',
-                'why.team.title': 'Erfahrenes Team',
-                'why.team.desc': 'Fachleute mit langjähriger Erfahrung',
-                'contact.title': 'Kontakt',
-                'contact.subtitle': 'Kontaktieren Sie uns - wir beantworten alle Ihre Fragen',
-                'contact.info': 'Kontaktdaten',
-                'contact.address': 'Adresse',
-                'contact.addressValue': '74B, Podole 05-600<br>Kreis Grójec, Woiwodschaft Masowien<br>Polen',
-                'contact.phone': 'Telefon',
-                'company.title': 'Firmendaten',
-                'company.subtitle': 'Vollständige Registrierungs- und Bankdaten unseres Unternehmens',
-                'company.registration': 'Registrierungsdaten',
-                'company.name': 'Firmenname',
-                'company.court': 'Registergericht',
-                'company.courtValue': 'Registergericht in Lublin',
-                'company.tax': 'Steuerdaten',
-                'footer.copyright': '© 2024 RAIDO Logistics Sp. z O.O. Alle Rechte vorbehalten.'
-            }
-        };
+      // ===== LANGUAGE SYSTEM =====
+      const translations = {
+        pl: {
+          "nav.home": "Strona główna",
+          "nav.about": "O nas",
+          "nav.services": "Usługi",
+          "nav.contact": "Kontakt",
+          "hero.tagline":
+            "Profesjonalne usługi <span>transportowe i logistyczne</span><br>w Polsce i całej Europie",
+          "hero.cta": "Skontaktuj się",
+          "hero.services": "Nasze usługi",
+          "about.title": "Kim jesteśmy?",
+          "about.text1":
+            "<strong>RAIDO Logistics Sp. z O.O.</strong> to dynamicznie rozwijająca się polska firma logistyczna, specjalizująca się w profesjonalnym transporcie drogowym.",
+          "about.text2":
+            'Nasza nazwa pochodzi od starożytnej runy "Raido", symbolizującej podróż, ruch i postęp. Wierzymy, że każda przesyłka to nie tylko transport, ale misja, którą realizujemy z pełnym zaangażowaniem i profesjonalizmem.',
+          "services.title": "Nasze Usługi",
+          "services.subtitle":
+            "Oferujemy kompleksowe rozwiązania logistyczne dostosowane do Twoich potrzeb",
+          "services.road.title": "Transport Drogowy",
+          "services.road.desc":
+            "Profesjonalny transport drogowy na terenie Polski i całej Europy. Gwarantujemy bezpieczną i terminową dostawę Twoich towarów.",
+          "services.ftl.title": "Ładunki Całopojazdowe (FTL)",
+          "services.ftl.desc":
+            "Transport całopojazdowy dla dużych przesyłek. Dedykowany pojazd tylko dla Twojego ładunku z gwarancją szybkiej dostawy.",
+          "services.ltl.title": "Ładunki Częściowe (LTL)",
+          "services.ltl.desc":
+            "Ekonomiczne rozwiązanie dla mniejszych przesyłek. Łączymy ładunki różnych klientów, optymalizując koszty transportu.",
+          "services.express.title": "Transport Ekspresowy",
+          "services.express.desc":
+            "Pilne przesyłki? Oferujemy transport ekspresowy z gwarantowanym czasem dostawy. Twoja przesyłka jest naszym priorytetem.",
+          "services.consulting.title": "Doradztwo Logistyczne",
+          "services.consulting.desc":
+            "Pomagamy zoptymalizować Twoje procesy logistyczne. Znajdziemy najlepsze rozwiązanie transportowe dla Twojego biznesu.",
+          "why.title": "Dlaczego My?",
+          "why.subtitle": "Poznaj powody, dla których klienci nam ufają",
+          "why.punctuality.title": "Punktualność",
+          "why.punctuality.desc": "Terminowa realizacja każdego zlecenia",
+          "why.safety.title": "Bezpieczeństwo",
+          "why.safety.desc": "Pełne ubezpieczenie przewożonych towarów",
+          "why.prices.title": "Konkurencyjne Ceny",
+          "why.prices.desc": "Atrakcyjne stawki bez ukrytych kosztów",
+          "why.team.title": "Doświadczony Zespół",
+          "why.team.desc": "Profesjonaliści z wieloletnim stażem",
+          "contact.title": "Kontakt",
+          "contact.subtitle":
+            "Skontaktuj się z nami - odpowiemy na wszystkie Twoje pytania",
+          "contact.info": "Dane Kontaktowe",
+          "contact.address": "Adres",
+          "contact.addressValue":
+            "74B, Podole 05-600<br>powiat grójecki, woj. mazowieckie<br>Polska",
+          "contact.phone": "Telefon",
+          "company.title": "Dane Firmowe",
+          "company.subtitle": "Pełne dane rejestracyjne i bankowe naszej firmy",
+          "company.registration": "Dane Rejestrowe",
+          "company.name": "Nazwa firmy",
+          "company.court": "Sąd Rejestrowy",
+          "company.courtValue": "Sąd Rejestrowy w Lublinie",
+          "company.tax": "Dane Podatkowe",
+          "footer.copyright":
+            "© 2024-2026 RAIDO Logistics Sp. z O.O. Wszystkie prawa zastrzeżone.",
+          "footer.privacy": "Polityka prywatności",
+        },
+        en: {
+          "nav.home": "Home",
+          "nav.about": "About Us",
+          "nav.services": "Services",
+          "nav.contact": "Contact",
+          "hero.tagline":
+            "Professional <span>transport and logistics</span> services<br>in Poland and throughout Europe",
+          "hero.cta": "Contact Us",
+          "hero.services": "Our Services",
+          "about.title": "Who Are We?",
+          "about.text1":
+            "<strong>RAIDO Logistics Sp. z O.O.</strong> is a dynamically growing Polish logistics company specializing in professional road transport.",
+          "about.text2":
+            'Our name comes from the ancient rune "Raido", symbolizing journey, movement, and progress. We believe that every shipment is not just transport, but a mission that we carry out with full commitment and professionalism.',
+          "services.title": "Our Services",
+          "services.subtitle":
+            "We offer comprehensive logistics solutions tailored to your needs",
+          "services.road.title": "Road Transport",
+          "services.road.desc":
+            "Professional road transport throughout Poland and Europe. We guarantee safe and timely delivery of your goods.",
+          "services.ftl.title": "Full Truckload (FTL)",
+          "services.ftl.desc":
+            "Full truckload transport for large shipments. A dedicated vehicle just for your cargo with guaranteed fast delivery.",
+          "services.ltl.title": "Less Than Truckload (LTL)",
+          "services.ltl.desc":
+            "Economical solution for smaller shipments. We combine loads from different customers, optimizing transport costs.",
+          "services.express.title": "Express Transport",
+          "services.express.desc":
+            "Urgent shipments? We offer express transport with guaranteed delivery time. Your shipment is our priority.",
+          "services.consulting.title": "Logistics Consulting",
+          "services.consulting.desc":
+            "We help optimize your logistics processes. We will find the best transport solution for your business.",
+          "why.title": "Why Choose Us?",
+          "why.subtitle": "Discover why customers trust us",
+          "why.punctuality.title": "Punctuality",
+          "why.punctuality.desc": "Timely completion of every order",
+          "why.safety.title": "Safety",
+          "why.safety.desc": "Full insurance of transported goods",
+          "why.prices.title": "Competitive Prices",
+          "why.prices.desc": "Attractive rates with no hidden costs",
+          "why.team.title": "Experienced Team",
+          "why.team.desc": "Professionals with years of experience",
+          "contact.title": "Contact",
+          "contact.subtitle": "Contact us - we will answer all your questions",
+          "contact.info": "Contact Information",
+          "contact.address": "Address",
+          "contact.addressValue":
+            "74B, Podole 05-600<br>Grójec County, Mazowieckie Province<br>Poland",
+          "contact.phone": "Phone",
+          "company.title": "Company Details",
+          "company.subtitle":
+            "Full registration and banking details of our company",
+          "company.registration": "Registration Data",
+          "company.name": "Company Name",
+          "company.court": "Registry Court",
+          "company.courtValue": "Registry Court in Lublin",
+          "company.tax": "Tax Data",
+          "footer.copyright":
+            "© 2024-2026 RAIDO Logistics Sp. z O.O. All rights reserved.",
+          "footer.privacy": "Privacy Policy",
+        },
+        de: {
+          "nav.home": "Startseite",
+          "nav.about": "Über Uns",
+          "nav.services": "Dienstleistungen",
+          "nav.contact": "Kontakt",
+          "hero.tagline":
+            "Professionelle <span>Transport- und Logistik</span>dienstleistungen<br>in Polen und ganz Europa",
+          "hero.cta": "Kontaktieren Sie uns",
+          "hero.services": "Unsere Leistungen",
+          "about.title": "Wer sind wir?",
+          "about.text1":
+            "<strong>RAIDO Logistics Sp. z O.O.</strong> ist ein dynamisch wachsendes polnisches Logistikunternehmen, das sich auf professionellen Straßentransport spezialisiert hat.",
+          "about.text2":
+            'Unser Name stammt von der alten Rune "Raido", die Reise, Bewegung und Fortschritt symbolisiert. Wir glauben, dass jede Sendung nicht nur Transport ist, sondern eine Mission, die wir mit vollem Engagement und Professionalität erfüllen.',
+          "services.title": "Unsere Dienstleistungen",
+          "services.subtitle":
+            "Wir bieten umfassende Logistiklösungen, die auf Ihre Bedürfnisse zugeschnitten sind",
+          "services.road.title": "Straßentransport",
+          "services.road.desc":
+            "Professioneller Straßentransport in ganz Polen und Europa. Wir garantieren sichere und pünktliche Lieferung Ihrer Waren.",
+          "services.ftl.title": "Komplettladung (FTL)",
+          "services.ftl.desc":
+            "Komplettladungstransport für große Sendungen. Ein dediziertes Fahrzeug nur für Ihre Fracht mit garantiert schneller Lieferung.",
+          "services.ltl.title": "Teilladung (LTL)",
+          "services.ltl.desc":
+            "Wirtschaftliche Lösung für kleinere Sendungen. Wir kombinieren Ladungen verschiedener Kunden und optimieren die Transportkosten.",
+          "services.express.title": "Expresstransport",
+          "services.express.desc":
+            "Dringende Sendungen? Wir bieten Expresstransport mit garantierter Lieferzeit. Ihre Sendung ist unsere Priorität.",
+          "services.consulting.title": "Logistikberatung",
+          "services.consulting.desc":
+            "Wir helfen bei der Optimierung Ihrer Logistikprozesse. Wir finden die beste Transportlösung für Ihr Unternehmen.",
+          "why.title": "Warum Wir?",
+          "why.subtitle": "Erfahren Sie, warum Kunden uns vertrauen",
+          "why.punctuality.title": "Pünktlichkeit",
+          "why.punctuality.desc": "Termingerechte Ausführung jedes Auftrags",
+          "why.safety.title": "Sicherheit",
+          "why.safety.desc": "Vollversicherung der transportierten Waren",
+          "why.prices.title": "Wettbewerbsfähige Preise",
+          "why.prices.desc": "Attraktive Tarife ohne versteckte Kosten",
+          "why.team.title": "Erfahrenes Team",
+          "why.team.desc": "Fachleute mit langjähriger Erfahrung",
+          "contact.title": "Kontakt",
+          "contact.subtitle":
+            "Kontaktieren Sie uns - wir beantworten alle Ihre Fragen",
+          "contact.info": "Kontaktdaten",
+          "contact.address": "Adresse",
+          "contact.addressValue":
+            "74B, Podole 05-600<br>Kreis Grójec, Woiwodschaft Masowien<br>Polen",
+          "contact.phone": "Telefon",
+          "company.title": "Firmendaten",
+          "company.subtitle":
+            "Vollständige Registrierungs- und Bankdaten unseres Unternehmens",
+          "company.registration": "Registrierungsdaten",
+          "company.name": "Firmenname",
+          "company.court": "Registergericht",
+          "company.courtValue": "Registergericht in Lublin",
+          "company.tax": "Steuerdaten",
+          "footer.copyright":
+            "© 2024-2026 RAIDO Logistics Sp. z O.O. Alle Rechte vorbehalten.",
+          "footer.privacy": "Datenschutzerklärung",
+        },
+      };
 
-        const langConfig = {
-            pl: { flag: 'https://flagcdn.com/w40/pl.png', code: 'PL', name: 'Polski' },
-            en: { flag: 'https://flagcdn.com/w40/gb.png', code: 'EN', name: 'English' },
-            de: { flag: 'https://flagcdn.com/w40/de.png', code: 'DE', name: 'Deutsch' }
-        };
+      const langConfig = {
+        pl: { flag: "assets/flags/pl.png", code: "PL", name: "Polski" },
+        en: { flag: "assets/flags/gb.png", code: "EN", name: "English" },
+        de: { flag: "assets/flags/de.png", code: "DE", name: "Deutsch" },
+      };
 
-        let currentLang = localStorage.getItem('raido-lang') || 'pl';
-
-        function toggleLangDropdown() {
-            document.getElementById('langSwitcher').classList.toggle('active');
+      // Safe localStorage wrapper (fails gracefully in private browsing)
+      function safeGetItem(key) {
+        try {
+          return localStorage.getItem(key);
+        } catch (e) {
+          return null;
         }
-
-        // Close dropdown when clicking outside
-        document.addEventListener('click', (e) => {
-            const switcher = document.getElementById('langSwitcher');
-            if (!switcher.contains(e.target)) {
-                switcher.classList.remove('active');
-            }
-        });
-
-        function setLanguage(lang) {
-            currentLang = lang;
-            localStorage.setItem('raido-lang', lang);
-            
-            // Update current language display
-            document.getElementById('currentFlag').src = langConfig[lang].flag;
-            document.getElementById('currentLang').textContent = langConfig[lang].code;
-            
-            // Update active state in dropdown
-            document.querySelectorAll('.lang-option').forEach(opt => {
-                opt.classList.remove('active');
-                if (opt.dataset.lang === lang) {
-                    opt.classList.add('active');
-                }
-            });
-            
-            // Update html lang attribute
-            document.documentElement.lang = lang;
-            
-            // Update page title
-            const titles = {
-                pl: 'RAIDO Logistics Sp.z O.O. | Profesjonalna Logistyka',
-                en: 'RAIDO Logistics Sp.z O.O. | Professional Logistics',
-                de: 'RAIDO Logistics Sp.z O.O. | Professionelle Logistik'
-            };
-            document.title = titles[lang];
-            
-            // Translate all elements
-            document.querySelectorAll('[data-i18n]').forEach(el => {
-                const key = el.dataset.i18n;
-                if (translations[lang][key]) {
-                    el.innerHTML = translations[lang][key];
-                }
-            });
-            
-            // Close dropdown
-            document.getElementById('langSwitcher').classList.remove('active');
-            
-            // Add animation effect
-            document.body.style.opacity = '0.95';
-            setTimeout(() => {
-                document.body.style.opacity = '1';
-            }, 150);
+      }
+      function safeSetItem(key, value) {
+        try {
+          localStorage.setItem(key, value);
+        } catch (e) {
+          /* ignore */
         }
+      }
 
-        // Initialize language on page load
-        document.addEventListener('DOMContentLoaded', () => {
-            setLanguage(currentLang);
+      let currentLang = safeGetItem("raido-lang") || "pl";
+
+      function toggleLangDropdown() {
+        const switcher = document.getElementById("langSwitcher");
+        const isOpen = switcher.classList.toggle("active");
+        switcher
+          .querySelector(".lang-current")
+          .setAttribute("aria-expanded", isOpen);
+      }
+
+      // Close dropdown when clicking outside
+      document.addEventListener("click", (e) => {
+        const switcher = document.getElementById("langSwitcher");
+        if (!switcher.contains(e.target)) {
+          switcher.classList.remove("active");
+        }
+      });
+
+      function setLanguage(lang) {
+        currentLang = lang;
+        safeSetItem("raido-lang", lang);
+
+        // Update current language display
+        document.getElementById("currentFlag").src = langConfig[lang].flag;
+        document.getElementById("currentLang").textContent =
+          langConfig[lang].code;
+
+        // Update active state in dropdown
+        document.querySelectorAll(".lang-option").forEach((opt) => {
+          opt.classList.remove("active");
+          if (opt.dataset.lang === lang) {
+            opt.classList.add("active");
+          }
         });
+
+        // Update html lang attribute
+        document.documentElement.lang = lang;
+
+        // Update page title
+        const titles = {
+          pl: "RAIDO Logistics Sp.z O.O. | Profesjonalna Logistyka",
+          en: "RAIDO Logistics Sp.z O.O. | Professional Logistics",
+          de: "RAIDO Logistics Sp.z O.O. | Professionelle Logistik",
+        };
+        document.title = titles[lang];
+
+        // Translate all elements
+        document.querySelectorAll("[data-i18n]").forEach((el) => {
+          const key = el.dataset.i18n;
+          if (translations[lang][key]) {
+            el.innerHTML = translations[lang][key];
+          }
+        });
+
+        // Close dropdown
+        document.getElementById("langSwitcher").classList.remove("active");
+
+        // Add animation effect
+        document.body.style.opacity = "0.95";
+        setTimeout(() => {
+          document.body.style.opacity = "1";
+        }, 150);
+      }
+
+      // Initialize language on page load
+      document.addEventListener("DOMContentLoaded", () => {
+        setLanguage(currentLang);
+      });
     </script>
-</body>
+  </body>
 </html>

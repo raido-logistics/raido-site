@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /assets/
+Disallow: /fonts/
+Disallow: /css/
+Disallow: /webfonts/
+
+Sitemap: https://www.raidologistics.pl/sitemap.xml
