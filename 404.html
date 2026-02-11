@@ -74,9 +74,27 @@
 <body>
     <div class="container">
         <h1>404</h1>
-        <h2>Strona nie znaleziona</h2>
-        <p>Przepraszamy, strona której szukasz nie istnieje lub została przeniesiona.</p>
-        <a href="/" class="btn">Wróć na stronę główną</a>
+        <h2 id="title">Strona nie znaleziona</h2>
+        <p id="desc">Przepraszamy, strona której szukasz nie istnieje lub została przeniesiona.</p>
+        <a href="/" class="btn" id="btn">Wróć na stronę główną</a>
     </div>
+    <script>
+        (function() {
+            var texts = {
+                pl: { title: 'Strona nie znaleziona', desc: 'Przepraszamy, strona której szukasz nie istnieje lub została przeniesiona.', btn: 'Wróć na stronę główną' },
+                en: { title: 'Page not found', desc: 'Sorry, the page you are looking for does not exist or has been moved.', btn: 'Go to homepage' },
+                de: { title: 'Seite nicht gefunden', desc: 'Entschuldigung, die gesuchte Seite existiert nicht oder wurde verschoben.', btn: 'Zur Startseite' }
+            };
+            try {
+                var lang = localStorage.getItem('raido-lang') || 'pl';
+                if (texts[lang]) {
+                    document.getElementById('title').textContent = texts[lang].title;
+                    document.getElementById('desc').textContent = texts[lang].desc;
+                    document.getElementById('btn').textContent = texts[lang].btn;
+                    document.documentElement.lang = lang;
+                }
+            } catch(e) {}
+        })();
+    </script>
 </body>
 </html>
