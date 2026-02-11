@@ -62,7 +62,7 @@
     <link
       rel="icon"
       type="image/png"
-      sizes="32x32"
+      sizes="96x96"
       href="assets/favicon-96x96.png"
     />
     <link
@@ -70,6 +70,46 @@
       sizes="180x180"
       href="assets/apple-touch-icon.png"
     />
+
+    <!-- Content Security Policy -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+    />
+
+    <!-- Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "TransportCompany",
+        "name": "RAIDO Logistics Sp. z O.O.",
+        "url": "https://www.raidologistics.pl",
+        "logo": "https://www.raidologistics.pl/assets/og-image.png",
+        "description": "Profesjonalne usługi logistyczne i transportowe w Polsce i Europie. FTL, LTL, transport ekspresowy.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "74B, Podole",
+          "postalCode": "05-600",
+          "addressRegion": "mazowieckie",
+          "addressCountry": "PL"
+        },
+        "telephone": ["+48798173473", "+48883510572"],
+        "email": "raido.logistics.pl@gmail.com",
+        "sameAs": [],
+        "areaServed": {
+          "@type": "GeoCircle",
+          "geoMidpoint": {
+            "@type": "GeoCoordinates",
+            "latitude": 51.9,
+            "longitude": 20.6
+          },
+          "geoRadius": "3000 km"
+        },
+        "knowsLanguage": ["pl", "en", "de"],
+        "taxID": "7972086263",
+        "legalName": "RAIDO Logistics Sp. z O.O."
+      }
+    </script>
 
     <!-- Font Awesome (self-hosted) -->
     <link rel="stylesheet" href="css/fontawesome.min.css" />
@@ -1183,52 +1223,6 @@
         color: var(--accent);
       }
 
-      .contact-form-wrapper {
-        background: var(--primary-light);
-        padding: 3rem;
-        border-radius: 20px;
-      }
-
-      .contact-form h3 {
-        font-size: 1.5rem;
-        margin-bottom: 2rem;
-      }
-
-      .form-group {
-        margin-bottom: 1.5rem;
-      }
-
-      .form-group label {
-        display: block;
-        margin-bottom: 0.5rem;
-        font-weight: 500;
-        color: rgba(255, 255, 255, 0.8);
-      }
-
-      .form-group input,
-      .form-group textarea {
-        width: 100%;
-        padding: 1rem 1.5rem;
-        background: var(--primary);
-        border: 2px solid transparent;
-        border-radius: 10px;
-        color: var(--text-light);
-        font-family: inherit;
-        font-size: 1rem;
-        transition: border-color 0.3s;
-      }
-
-      .form-group input:focus,
-      .form-group textarea:focus {
-        outline: none;
-        border-color: var(--accent);
-      }
-
-      .form-group textarea {
-        min-height: 150px;
-        resize: vertical;
-      }
-
       /* Company Details Section */
       .company-details {
         background: var(--primary-light);
@@ -1286,7 +1280,8 @@
         font-weight: 600;
         color: var(--text-light);
         text-align: right;
-        word-break: break-all;
+        overflow-wrap: break-word;
+        word-break: break-word;
       }
 
       /* Footer */
@@ -1327,6 +1322,10 @@
 
       .footer-legal {
         margin-top: 1rem;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0;
       }
 
       .footer-legal a {
@@ -1612,7 +1611,7 @@
         </div>
         <div class="hero-content">
           <div class="hero-logo">
-            <div class="hero-logo-text">RAIDO</div>
+            <h1 class="hero-logo-text">RAIDO</h1>
             <div class="hero-logo-sub">LOGISTICS</div>
           </div>
           <p class="hero-tagline" data-i18n="hero.tagline">
@@ -1884,6 +1883,10 @@
           <a href="privacy.html" data-i18n="footer.privacy"
             >Polityka prywatności</a
           >
+          <span style="color: rgba(255,255,255,0.3); margin: 0 0.5rem;">|</span>
+          <a href="privacy.html#impressum" data-i18n="footer.impressum"
+            >Impressum</a
+          >
         </div>
       </div>
       <div class="footer-bottom">
@@ -1931,6 +1934,8 @@
         link.addEventListener("click", () => {
           navLinks.classList.remove("active");
           hamburger.classList.remove("active");
+          hamburger.setAttribute("aria-expanded", "false");
+          hamburger.setAttribute("aria-label", "Otwórz menu");
         });
       });
 
@@ -1962,13 +1967,23 @@
       // Smooth scroll for anchor links
       document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute("href"));
-          if (target) {
-            target.scrollIntoView({
-              behavior: "smooth",
-              block: "start",
-            });
+          const href = this.getAttribute("href");
+          if (!href || href === "#") {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+            return;
+          }
+          try {
+            const target = document.querySelector(href);
+            if (target) {
+              e.preventDefault();
+              target.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+            }
+          } catch (err) {
+            // Invalid selector, let the browser handle it
           }
         });
       });
@@ -2035,6 +2050,7 @@
           "footer.copyright":
             "© 2024-2026 RAIDO Logistics Sp. z O.O. Wszystkie prawa zastrzeżone.",
           "footer.privacy": "Polityka prywatności",
+          "footer.impressum": "Impressum",
         },
         en: {
           "nav.home": "Home",
@@ -2096,6 +2112,7 @@
           "footer.copyright":
             "© 2024-2026 RAIDO Logistics Sp. z O.O. All rights reserved.",
           "footer.privacy": "Privacy Policy",
+          "footer.impressum": "Impressum",
         },
         de: {
           "nav.home": "Startseite",
@@ -2158,6 +2175,7 @@
           "footer.copyright":
             "© 2024-2026 RAIDO Logistics Sp. z O.O. Alle Rechte vorbehalten.",
           "footer.privacy": "Datenschutzerklärung",
+          "footer.impressum": "Impressum",
         },
       };
 
